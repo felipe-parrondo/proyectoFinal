@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background: -webkit-linear-gradient(to top, #D4D4D4, #ffffff);
+  background: linear-gradient(to top, #D4D4D4, #ffffff);
+  background-color: #EAEDED; }
+
+/* -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- */
+header {
+  background-color: #131A22;
+  height: 25vh; }
+  header a img {
+    max-height: 10rem;
+    padding-right: 5rem; }
+  header #menu {
+    line-height: 3.3rem;
+    text-align: center;
+    align-self: flex-start; }
+    header #menu ul {
+      position: -webkit-sticky; }
+      header #menu ul li {
+        display: inline; }
+        header #menu ul li a {
+          margin-left: 4rem;
+          margin-right: 4rem;
+          padding: 0.5rem;
+          text-transform: capitalize;
+          text-decoration: none;
+          color: #DDD;
+          font-family: 'Roboto', sans-serif;
+          font-weight: 900;
+          transition: 1s; }
+        header #menu ul li .menu__border:hover {
+          transition: 0.5s;
+          border: #FFFF solid 1px;
+          border-radius: 10px; }
+
+/* -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- */
+#Index #Index__Titulo {
+  margin-top: 7vh;
+  padding-left: 2.5%;
+  font-family: 'Domine', serif;
+  font-size: 250%; }
+
+#Index .Index__Video {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 5%; }
+  #Index .Index__Video p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 3.9vh; }
+
+#Index #Index__FlexContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh; }
+  #Index #Index__FlexContainer #Index__Video--VideoUno {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    #Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno {
+      font-family: 'Roboto', sans-serif;
+      text-align: left;
+      font-size: 170%;
+      width: 47%;
+      height: 47%; }
+      #Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno #Index__Video--TextoUno--Titulo {
+        text-align: right;
+        font-family: 'Domine', serif; }
+  #Index #Index__FlexContainer #Index__Video--VideoDos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right; }
+    #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos {
+      font-family: 'Roboto', sans-serif;
+      text-align: left;
+      font-size: 170%;
+      width: 47%;
+      height: 47%; }
+      #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos #Index__Video--TextoDos--Titulo {
+        font-family: 'Domine', serif; }
+
+/* -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2%;
+  background-color: #131A22;
+  height: 20vh;
+  width: 100%; }
+  footer a {
+    width: auto;
+    padding-left: 10%; }
+    footer a img {
+      max-height: 15vh; }
+  footer ul {
+    width: auto;
+    padding-bottom: 5rem;
+    margin: 0;
+    text-align: left; }
+    footer ul li {
+      list-style: none;
+      color: #DDD; }
+
+/* -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- */
+#pFrecuentes {
+  padding-left: 2.5%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly; }
+  #pFrecuentes h3 {
+    margin-top: 7vh;
+    font-family: 'Domine', serif;
+    font-size: 250%; }
+  #pFrecuentes .preguntaMain {
+    border: black solid 1px; }
+    #pFrecuentes .preguntaMain .pregunta {
+      background-color: gainsboro;
+      font-size: 1.5rem;
+      font-family: 'Domine', serif; }
+    #pFrecuentes .preguntaMain .preguntaText {
+      font-family: 'Roboto', sans-serif; }
+
+#redireccionContacto {
+  margin-bottom: 10vh;
+  margin-top: 5vh; }
+  #redireccionContacto #pRedirec {
+    justify-items: center;
+    text-align: center; }
+  #redireccionContacto p {
+    justify-items: center;
+    text-align: center; }
+
+/* -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- */
+#contacto {
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  #contacto fieldset {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 3.9vh; }
+    #contacto fieldset .container-fluid--col {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1vh; }
+    #contacto fieldset #consulta {
+      width: 100%;
+      height: 20vh; }
+    #contacto fieldset #boton {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2vh; }
+  #contacto #mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    #contacto #mapa p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 120%;
+      text-align: center; }
+
+/* -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- */
+#grillaQSomos {
+  display: grid;
+  margin: 6vh;
+  justify-content: stretch;
+  align-content: stretch;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 0.6fr;
+  grid-template-areas: "quienesImagen  loremParcial" "loremFullWidth loremFullWidth"; }
+  #grillaQSomos #quienesImagen {
+    grid-area: quienesImagen; }
+    #grillaQSomos #quienesImagen img {
+      width: 80%;
+      height: 80%; }
+  #grillaQSomos #loremParcial {
+    grid-area: loremParcial;
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    line-height: 180%; }
+  #grillaQSomos #loremFullWidth {
+    grid-area: loremFullWidth;
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    line-height: 180%; }
+
+/* -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- */
+#loMasComprado #loMasCompradoTitle {
+  font-size: 1.5rem;
+  font-family: 'Domine', serif;
+  margin-left: 2%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  padding: 0; }
+
+#loMasComprado #loMasCompradoItems ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  #loMasComprado #loMasCompradoItems ul li {
+    list-style: none;
+    border: 1px black solid;
+    width: 15%; }
+    #loMasComprado #loMasCompradoItems ul li table {
+      margin-left: 5%;
+      margin-right: 5%; }
+      #loMasComprado #loMasCompradoItems ul li table tr {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        line-height: 3.9vh;
+        font-size: 120%; }
+        #loMasComprado #loMasCompradoItems ul li table tr th {
+          width: 25%; }
+
+/* Divison loMasComprado --- catalogo */
+#catalogo #catalogoTitle {
+  font-size: 1.5rem;
+  font-family: 'Domine', serif;
+  margin-left: 2%;
+  margin-top: 5%;
+  margin-bottom: 2%; }
+
+#catalogo #catalogoItems ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  #catalogo #catalogoItems ul li {
+    list-style: none;
+    border: 1px black solid;
+    width: 18%; }
+    #catalogo #catalogoItems ul li table {
+      margin: 5%; }
+      #catalogo #catalogoItems ul li table tr {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        line-height: 3.9vh;
+        font-size: 120%; }
+        #catalogo #catalogoItems ul li table tr th {
+          width: 25%; }
+
+#catalogo #paginas {
+  text-align: center; }
