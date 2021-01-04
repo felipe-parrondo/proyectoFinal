@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+@import "../node_modules/rfs/scss"; // responsive font size module
 
 $fondo: #131A22;
 
@@ -16,40 +17,23 @@ body {
 
 header {
     background-color: $fondo;
-    height: 25vh;
-
-    a {
-        img {
-            max-height: 10rem;
-            padding-right: 5rem;
-        }
-    }
 
     #menu {
         line-height: 3.3rem;
-        text-align: center;
-        align-self: flex-start;
 
         ul {
-            position: -webkit-sticky;
 
             li {
-                display: inline;
 
                 a {
-                    margin-left: 4rem;
-                    margin-right: 4rem;
-                    padding: 0.5rem;
                     text-transform: capitalize;
                     text-decoration: none;
                     color: #DDD;
                     font-family: 'Roboto', sans-serif;
                     font-weight: 900;
-                    transition: 1s;
                 }
 
                 .menu__border:hover {
-                    transition: 0.5s;
                     border: #FFFF solid 1px;
                     border-radius: 10px;
                 }
@@ -63,16 +47,11 @@ header {
 #Index {
 
     #Index__Titulo {
-        margin-top: 7vh;
-        padding-left: 2.5%;
         font-family: 'Domine', serif;
-        font-size: 250%;
+        @include rfs (200%, font-size);
     }
 
     .Index__Video {
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: 5%;
 
         p {
             font-family: 'Roboto', sans-serif;
@@ -82,21 +61,13 @@ header {
     }
 
     #Index__FlexContainer {
-        display: flex;
-        flex-direction: column;
-        margin-top: 3vh;
     
         #Index__Video--VideoUno {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
     
             #Index__Video--TextoUno {
                 font-family: 'Roboto', sans-serif;
                 text-align: left;
-                font-size: 170%;
-                width: 47%;
-                height: 47%;
+                @include rfs (170%, font-size);
     
                 #Index__Video--TextoUno--Titulo {
                     text-align: right;
@@ -106,17 +77,12 @@ header {
         }
     
         #Index__Video--VideoDos {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             text-align: right;
     
             #Index__Video--TextoDos {
                 font-family: 'Roboto', sans-serif;
                 text-align: left;
-                font-size: 170%;
-                width: 47%;
-                height: 47%;
+                @include rfs (170%, font-size);
     
                 #Index__Video--TextoDos--Titulo {
                     font-family: 'Domine', serif;;
@@ -129,17 +95,10 @@ header {
 /* -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- */
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 2%;
     background-color: $fondo;
-    height: 20vh;
-    width: 100%;
+    overflow: hidden;
 
     a {
-        width: auto;
-        padding-left: 10%;
 
         img {
             max-height: 15vh;
@@ -147,14 +106,13 @@ footer {
     }
 
     ul {
-        width: auto;
-        padding-bottom: 5rem;
-        margin: 0;
         text-align: left;
+        background-color: $fondo;
 
         li {
             list-style: none;
             color: #DDD;
+            background-color: $fondo;
         }
     }
 }
