@@ -95,35 +95,76 @@ footer {
     text-align: center; }
 
 /* -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- */
-#contacto {
-  margin-top: 7vh;
-  margin-bottom: 7vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-  #contacto fieldset {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    line-height: 3.9vh; }
-    #contacto fieldset .container-fluid--col {
+@media (min-width: 992px) {
+  #contacto {
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    #contacto fieldset {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      line-height: 3.9vh; }
+      #contacto fieldset .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1vh; }
+      #contacto fieldset #consulta {
+        width: 100%;
+        height: 20vh; }
+      #contacto fieldset #boton {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2vh; }
+    #contacto #mapa {
       display: flex;
       flex-direction: column;
-      margin-top: 1vh; }
-    #contacto fieldset #consulta {
-      width: 100%;
-      height: 20vh; }
-    #contacto fieldset #boton {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 2vh; }
-  #contacto #mapa {
+      justify-content: space-evenly; }
+      #contacto #mapa iframe {
+        width: 35vw;
+        height: 30vw; }
+      #contacto #mapa p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 120%;
+        text-align: center; } }
+
+@media (max-width: 991.9px) {
+  #contacto {
+    margin-top: 7vh;
+    margin-bottom: 7vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; }
-    #contacto #mapa p {
+    justify-content: space-around; }
+    #contacto fieldset {
       font-family: 'Roboto', sans-serif;
-      font-size: 120%;
-      text-align: center; }
+      font-weight: 300;
+      line-height: 3.9vh; }
+      #contacto fieldset .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1vh; }
+      #contacto fieldset #consulta {
+        width: 100%;
+        height: 20vh; }
+      #contacto fieldset #boton {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2vh; }
+    #contacto #mapa {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 5vh; }
+      #contacto #mapa iframe {
+        width: 70vw;
+        height: 70vw; }
+      #contacto #mapa p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 120%;
+        text-align: center;
+        margin-top: 2vh; } }
 
 /* -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- */
 #grillaQSomos {

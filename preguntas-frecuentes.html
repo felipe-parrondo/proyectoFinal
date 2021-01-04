@@ -15,25 +15,27 @@
 <body>
     <!-- zona superior de las paginas en el sketch --- común al resto de las páginas -->
     <header>
-        <a href="index.html"> <!-- logo con link a index como el logo del footer -->
-            <img src="multimedia/logos/main/logo-placeholder.png"> 
-        </a>
+        <div class="container-fluid d-flex justify-content-start">
+            <a href="index.html"> <!-- logo con link a index como el logo del footer -->
+                <img class="img-fluid" src="multimedia/logos/main/logo-placeholder.png"> 
+            </a>
 
-        <a href="index.html"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
-            <img src="multimedia/logos/main/banner-placeholder.png"> 
-        </a>
+            <a href="index.html"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
+                <img class="img-fluid" src="multimedia/logos/main/banner-placeholder.png"> 
+            </a>
+        </div>
 
-        <nav id="menu"> <!-- navegación interna del sitio -->
-            <ul>
-                <li> <a href="index.html" class="menu__border"> Inicio </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="catalogo.html" class="menu__border"> Cátalogo </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="quienes-somos.html" class="menu__border"> Quienes Somos </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="preguntas-frecuentes.html" class="menu__border"> Preguntas Frecuentes </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="contacto.html" class="menu__border"> Contacto </a> </li>
+        <nav class="container-fluid" id="menu"> <!-- navegación interna del sitio -->
+            <ul class="nav d-flex justify-content-around">
+                <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="preguntas-frecuentes.html" class="nav-link text-white"> Preguntas Frecuentes </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="contacto.html" class="nav-link text-white"> Contacto </a> </li>
             </ul>
         </nav>
     </header>
@@ -99,7 +101,7 @@
     </div>
 
     <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
-    <footer> 
+    <footer class="d-inline-flex justify-content-around pt-4 container-fluid"> 
         <ul> <!-- contacto -->
             <li> Telefono </li>
             <li> Mail </li>
@@ -107,14 +109,14 @@
         </ul>
 
         <ul> <!-- metodos de pago -->
-            <li> Tarjeta de Crédito </li>
-            <li> Tarjeta de Débito </li>
+            <li> Crédito </li>
+            <li> Débito </li>
             <li> Efectivo </li>
             <li> Mercadopago </li>
         </ul>
 
         <a href="index.html"> <!-- logo con link a index como el logo del header -->
-            <img src="multimedia/logos/main/logo-placeholder.png"> 
+            <img src="../multimedia/logos/main/logo-placeholder.png"> 
         </a> 
  
         <ul> <!-- redes sociales y whatsapp -->

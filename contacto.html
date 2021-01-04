@@ -15,53 +15,54 @@
 <body>
     <!-- zona superior de las paginas en el sketch --- común al resto de las páginas -->
     <header>
-        <a href="index.html"> <!-- logo con link a index como el logo del footer -->
-            <img src="multimedia/logos/main/logo-placeholder.png"> 
-        </a>
+        <div class="container-fluid d-flex justify-content-start">
+            <a href="index.html"> <!-- logo con link a index como el logo del footer -->
+                <img class="img-fluid" src="multimedia/logos/main/logo-placeholder.png"> 
+            </a>
 
-        <a href="index.html"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
-            <img src="multimedia/logos/main/banner-placeholder.png"> 
-        </a>
+            <a href="index.html"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
+                <img class="img-fluid" src="multimedia/logos/main/banner-placeholder.png"> 
+            </a>
+        </div>
 
-        <nav id="menu"> <!-- navegación interna del sitio -->
-            <ul>
-                <li> <a href="index.html" class="menu__border"> Inicio </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="catalogo.html" class="menu__border"> Cátalogo </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="quienes-somos.html" class="menu__border"> Quienes Somos </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="preguntas-frecuentes.html" class="menu__border"> Preguntas Frecuentes </a> </li>
-                <li> <a> | </a> </li>
-                <li> <a href="contacto.html" class="menu__border"> Contacto </a> </li>
+        <nav class="container-fluid" id="menu"> <!-- navegación interna del sitio -->
+            <ul class="nav d-flex justify-content-around">
+                <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="preguntas-frecuentes.html" class="nav-link text-white"> Preguntas Frecuentes </a> </li>
+                <!--<li class="nav-item"> <a> | </a> </li>-->
+                <li class="nav-item menu__border"> <a href="contacto.html" class="nav-link text-white"> Contacto </a> </li>
             </ul>
         </nav>
     </header>
 
-    <!-- le falta encuadrar un poco las cajas y agregar más cosas --- a futuro -->
     <!-- formulario de contacto -->
-    <div id="contacto">
+    <div class="container-fluid" id="contacto">
         <form>
             <fieldset>
 
                 <legend>Te Contactamos!</legend>
 
-                <div class="container-fluid--col">
+                <div class="form-group">
                         <label for="nombre_apellido"> Nombre y Apellido: </label>
                         <input type="text" name="nombre_apellido" placeholder="Juan Perez">
                 </div>
 
-                <div class="container-fluid--col">
+                <div class="form-group">
                     <label for="tel"> Telefono: </label>
                     <input type="tel" name="tel" placeholder="1512345678">
                 </div>
 
-                <div class="container-fluid--col">
+                <div class="form-group">
                     <label for="email"> E-mail: </label>
                     <input type="email" name="email" placeholder="juanperez@gmail.com">
                 </div>
 
-                <div class="container-fluid--col">
+                <div class="form-group">
                     <label for="horario_contacto"> Horario a ser contactado: </label>
                     <select name="horario_contacto">
                         <option> Mañana (8:00 - 11:00) </option>
@@ -70,17 +71,17 @@
                     </select>
                 </div>
 
-                <div class="container-fluid--col">
+                <div class="form-group">
                     <label for="consulta"> Su consulta: </label> <!-- agrandarlo cuando aprendamos css -->
                     <input type="text" name="consulta" id="consulta">
                 </div>
 
-                <div class="container-fluid" id="checkbox">
+                <div class="form-group" id="checkbox">
                     <input type="checkbox" name="news" value="Newsletter" id="checkbox">
                     <label for="news" id="checkboxText"> 5% de descuento en su primera compra sucribiendose a nuestro newsletter! </label>
                 </div>
 
-                <div class="container-fluid" id="boton"> 
+                <div class="form-group" id="boton"> 
                     <button type="reset"> Limpiar </button>
                     <button type="submit"> Enviar! </button>
                 </div>
@@ -90,7 +91,7 @@
 
         <!-- mapa de donde está el hipotetico local-->
         <div id="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.403146779598!2d-58.40070348267546!3d-34.594702396088095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbd6dd73d3a1%3A0x2707a20b9bf40f7c!2sLayla&#39;s%20Market!5e0!3m2!1ses!2sar!4v1608521734224!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.403146779598!2d-58.40070348267546!3d-34.594702396088095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbd6dd73d3a1%3A0x2707a20b9bf40f7c!2sLayla&#39;s%20Market!5e0!3m2!1ses!2sar!4v1608521734224!5m2!1ses!2sar" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
             <p class="container-fluid">
                 Si te queda alguna duda pasate por el local!
@@ -100,7 +101,7 @@
     </div>
 
     <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
-    <footer> 
+    <footer class="d-inline-flex justify-content-around pt-4 container-fluid"> 
         <ul> <!-- contacto -->
             <li> Telefono </li>
             <li> Mail </li>
@@ -108,14 +109,14 @@
         </ul>
 
         <ul> <!-- metodos de pago -->
-            <li> Tarjeta de Crédito </li>
-            <li> Tarjeta de Débito </li>
+            <li> Crédito </li>
+            <li> Débito </li>
             <li> Efectivo </li>
             <li> Mercadopago </li>
         </ul>
 
         <a href="index.html"> <!-- logo con link a index como el logo del header -->
-            <img src="multimedia/logos/main/logo-placeholder.png"> 
+            <img src="../multimedia/logos/main/logo-placeholder.png"> 
         </a> 
  
         <ul> <!-- redes sociales y whatsapp -->

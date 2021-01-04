@@ -165,45 +165,105 @@ footer {
 
 /* -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- */
 
-#contacto {
-    margin-top: 7vh;
-    margin-bottom: 7vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    fieldset {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        line-height: 3.9vh;
-
-        .container-fluid--col {
-            display: flex;
-            flex-direction: column;
-            margin-top: 1vh;
-        }
-
-        #consulta {
-            width: 100%;
-            height: 20vh;
-        }
-
-        #boton {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2vh;
-        }
-    }
-
-    #mapa {
+@media (min-width: 992px) {
+    #contacto {
+        margin-top: 7vh;
+        margin-bottom: 7vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-evenly;
 
-        p {
+        fieldset {
             font-family: 'Roboto', sans-serif;
-            font-size: 120%;
-            text-align: center;
+            font-weight: 300;
+            line-height: 3.9vh;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1vh;
+            }
+
+            #consulta {
+                width: 100%;
+                height: 20vh;
+            }
+
+            #boton {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 2vh;
+            }
+        }
+
+        #mapa {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            iframe {
+                @include rfs (35vw, width);
+                @include rfs (30vw, height);
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                @include rfs (120%, font-size);
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.9px) {
+    #contacto {
+        margin-top: 7vh;
+        margin-bottom: 7vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        fieldset {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            line-height: 3.9vh;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1vh;
+            }
+
+            #consulta {
+                width: 100%;
+                height: 20vh;
+            }
+
+            #boton {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 2vh;
+            }
+        }
+
+        #mapa {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 5vh;
+
+            iframe {
+                @include rfs (70vw, width);
+                @include rfs (70vw, height);
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                @include rfs (120%, font-size);
+                text-align: center;
+                margin-top: 2vh;
+            }
         }
     }
 }
