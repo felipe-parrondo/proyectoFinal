@@ -130,20 +130,24 @@ footer {
     h3 {
         margin-top: 7vh;
         font-family: 'Domine', serif;
-        font-size: 250%;
+        @include rfs (250%, font-size);
     }
 
     .preguntaMain {
         border: black solid 1px;
+        margin-top: 3vh;
 
         .pregunta {
             background-color: gainsboro;
-            font-size: 1.5rem;
+            @include rfs (1.5rem, font-size);
             font-family: 'Domine', serif;
+            @include rfs (0.5%, padding-left);
         }
 
         .preguntaText {
             font-family: 'Roboto', sans-serif;
+            @include rfs (100%, font-size);
+            @include rfs (0.5%, padding-left);
         }
     }
 }
@@ -271,36 +275,17 @@ footer {
 /* -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- */
 
 #grillaQSomos {
-    display: grid;
     margin: 6vh;
-    justify-content: stretch;
-    align-content: stretch;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 0.6fr;
-    grid-template-areas: 
-        "quienesImagen  loremParcial"
-        "loremFullWidth loremFullWidth";
-
-    #quienesImagen {
-        grid-area: quienesImagen;
-
-        img {
-            width: 80%;
-            height: 80%;
-        }
-    }
 
     #loremParcial {
-        grid-area: loremParcial;
         font-family: 'Roboto', sans-serif;
-        font-size: 150%;
+        @include rfs (135%, font-size);
         line-height: 180%;
     }
 
     #loremFullWidth {
-        grid-area: loremFullWidth;
         font-family: 'Roboto', sans-serif;
-        font-size: 150%;
+        @include rfs (135%, font-size);
         line-height: 180%; 
     }
 }
@@ -310,7 +295,7 @@ footer {
 #loMasComprado {
 
     #loMasCompradoTitle {
-        font-size: 1.5rem;
+        @include rfs (1.5rem, font-size);
         font-family: 'Domine', serif;
         margin-left: 2%;
         margin-top: 5%;
@@ -338,7 +323,7 @@ footer {
                         font-family: 'Roboto', sans-serif;
                         font-weight: 300;
                         line-height: 3.9vh;
-                        font-size: 120%;
+                        @include rfs (120%, font-size);
 
                         th {
                             width: 25%;
@@ -355,7 +340,7 @@ footer {
 #catalogo {
 
     #catalogoTitle {
-        font-size: 1.5rem;
+        @include rfs (1.5rem, font-size);
         font-family: 'Domine', serif;
         margin-left: 2%;
         margin-top: 5%;
@@ -381,7 +366,7 @@ footer {
                         font-family: 'Roboto', sans-serif;
                         font-weight: 300;
                         line-height: 3.9vh;
-                        font-size: 120%;
+                        @include rfs (120%, font-size);
 
                         th {
                             width: 25%;
