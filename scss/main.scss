@@ -3,6 +3,7 @@
 @import "../node_modules/rfs/scss"; // responsive font size module
 
 $fondo: #131A22;
+$headerbg: gray;
 
 
 body {
@@ -22,6 +23,26 @@ header {
         line-height: 3.3rem;
 
         ul {
+
+            #index--index {
+                background-color: $headerbg;
+            }
+
+            #index--catalogo {
+                background-color: $headerbg;
+            }
+
+            #index--qsomos {
+                background-color: $headerbg;
+            }
+
+            #index--pfrecuentes {
+                background-color: $headerbg;
+            }
+
+            #index--contacto {
+                background-color: $headerbg;
+            }
 
             li {
 
@@ -292,92 +313,54 @@ footer {
 
 /* -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- */
 
-#loMasComprado {
-
-    #loMasCompradoTitle {
-        @include rfs (1.5rem, font-size);
-        font-family: 'Domine', serif;
-        margin-left: 2%;
-        margin-top: 5%;
-        margin-bottom: 2%;
-        padding: 0;
-    }
-
-    #loMasCompradoItems {
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-
-            li {
-                list-style: none;
-                border: 1px black solid;
-                width: 15%;
-
-                table {
-                    margin-left: 5%;
-                    margin-right: 5%;
-
-                    tr {
-                        font-family: 'Roboto', sans-serif;
-                        font-weight: 300;
-                        line-height: 3.9vh;
-                        @include rfs (120%, font-size);
-
-                        th {
-                            width: 25%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* Divison loMasComprado --- catalogo */
 
 #catalogo {
+    margin-top: 2vh;
 
     #catalogoTitle {
-        @include rfs (1.5rem, font-size);
-        font-family: 'Domine', serif;
-        margin-left: 2%;
-        margin-top: 5%;
-        margin-bottom: 2%;
+        margin-left: 2vw;
+        margin-top: 2vw;
     }
 
-    #catalogoItems {
-        
-        ul {
+    .flex--catalogoItems {
+        display: flex;
+        direction: column;
+        justify-content: space-around;
+        margin: 2vh;
+    
+        .catalogoItems {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+        
+            .catalogoItems--item {
+                transition: 0.3s;
+                background: #ffffff;
+                margin: 3vh;
+                padding-top: 1vh;
 
-            li {
-                list-style: none;
-                border: 1px black solid;
-                width: 18%;
-
-                table {
-                    margin: 5%;
-
-                    tr {
-                        font-family: 'Roboto', sans-serif;
-                        font-weight: 300;
-                        line-height: 3.9vh;
-                        @include rfs (120%, font-size);
-
-                        th {
-                            width: 25%;
-                        }
-                    }
+                img {
+                    max-width: 100%;
+                    height: auto;
                 }
+        
+                p {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    line-height: 3.9vh;
+                    @include rfs (120%, font-size);
+                }
+            }
+        
+            .catalogoItems--item:hover {
+                -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.05);
+                box-shadow: 0 0 11px rgba(33,33,33,.2); 
             }
         }
     }
-
-    #paginas {
-        text-align: center;
-    }
 }
+
+
+

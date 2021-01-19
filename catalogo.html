@@ -29,7 +29,7 @@
             <ul class="nav d-flex justify-content-around">
                 <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
                 <!--<li class="nav-item"> <a> | </a> </li>-->
-                <li class="nav-item menu__border"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
+                <li class="nav-item menu__border" id="index--catalogo"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
                 <!--<li class="nav-item"> <a> | </a> </li>-->
                 <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
                 <!--<li class="nav-item"> <a> | </a> </li>-->
@@ -40,457 +40,126 @@
         </nav>
     </header>
 
-    <!-- en el th (por ahora vacio) va a ir la imagen del producto a futuro --- el #paginas (ultimo item de #catalogo) tiene un href placeholder que lleva nuevamente al catalogo -->
-    <div id="loMasComprado">
-        <h3 class="container-fluid" id="loMasCompradoTitle">
-            Lo más Comprado!
-        </h3>
-        
-        <div id="loMasCompradoItems">
-            <ul class="container-fluid">
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
+    <div id="catalogo" class="container-fluid ">
 
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="catalogo">
         <h3 id="catalogoTitle">
             Nuestros Productos
         </h3>
 
-        <div id="catalogoItems">
-            <ul class="container-fluid">
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
+        <div class="flex--catalogoItems">
 
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
+            <div class="catalogoItems">
 
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_negra.jpg"> 
+                    <p> $99.99 </p>
+                </div>
 
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_roja.jpg"> 
+                    <p> $105.50 </p>
+                </div>
 
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_plateada.jpg"> 
+                    <p> Precio </p>
+                </div>
 
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_germania_plateada.jpg"> 
+                    <p> Precio </p>
+                </div>
 
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_pajarito_tornasolada.jpg"> 
+                    <p> Precio </p>
+                </div>
 
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_sastre.jpg"> 
+                    <p> Precio </p>
+                </div>
 
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
+            </div>
 
-            <ul class="container-fluid">
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-
-            <ul class="container-fluid">
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-                <li>
-                    <table>
-                        <tr>
-                            <th>
-                                <img>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Precio
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                Stock
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Descripción
-                            </td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
         </div>
 
-        <div id="paginas">
-            <a href="catalogo.html">
-                <p>
-                    ← 1,2...8 →
-                </p>
-            </a>
+        <div class="flex--catalogoItems">
+
+            <div class="catalogoItems">
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_negra.jpg"> 
+                    <p> $99.99 </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_roja.jpg"> 
+                    <p> $105.50 </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_plateada.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_germania_plateada.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_pajarito_tornasolada.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_sastre.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+            </div>
+
         </div>
+
+        <div class="flex--catalogoItems">
+
+            <div class="catalogoItems">
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_negra.jpg"> 
+                    <p> $99.99 </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_roja.jpg"> 
+                    <p> $105.50 </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_mundial_plateada.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_germania_plateada.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_pajarito_tornasolada.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+                <div class="container-fluid catalogoItems--item">
+                    <img src="multimedia/products/tijera_sastre.jpg"> 
+                    <p> Precio </p>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
     <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
