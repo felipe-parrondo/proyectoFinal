@@ -18,12 +18,12 @@
     <!-- zona superior de las paginas en el sketch --- común al resto de las páginas -->
     <header>
         <div class="container-fluid d-flex justify-content-start">
-            <a href="index.html"> <!-- logo con link a index como el logo del footer -->
-                <img class="img-fluid" src="multimedia/logos/main/logo-placeholder.png"> 
+            <a href="index.html" id="header--logoCuadrado"> <!-- logo con link a index como el logo del footer -->
+                <img class="img-fluid" src="multimedia/logos/main/logo_cuadrado.PNG"> 
             </a>
 
-            <a href="index.html"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
-                <img class="img-fluid" src="multimedia/logos/main/banner-placeholder.png"> 
+            <a href="index.html" id="header--banner"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
+                Merceria Tefel
             </a>
         </div>
 
@@ -49,11 +49,11 @@
         
         <!-- div del primer video con su descripción -->
         <div id="Index__Video--VideoUno" class="row Index__Video"> 
-            <video class="col" width="47%" height="47%" controls autoplay muted>  
-                <source>
+            <video class="col-xl-6" width="47%" height="47%" autoplay muted loop>  
+                <source src="multimedia/videos/video1.mp4">
             </video>
 
-            <div id="Index__Video--TextoUno" class="col">
+            <div id="Index__Video--TextoUno" class="col-xl-6">
                 <h3 id="Index__Video--TextoUno--Titulo">
                     Título
                 </h3>
@@ -66,7 +66,7 @@
 
         <!-- div del segundo video con su descripción -->
         <div id="Index__Video--VideoDos" class="Index__Video row mt-5"> 
-            <div id="Index__Video--TextoDos" class="col">
+            <div id="Index__Video--TextoDos" class="col-xl-6">
                 <h3 id="Index__Video--TextoDos--Titulo">
                     Título
                 </h3>
@@ -76,37 +76,38 @@
                 </p>
             </div>
 
-            <video class="col" width="47%" height="47%" controls>  
-                <source>
+            <video class="col-xl-6" width="47%" height="47%" autoplay muted loop>  
+                <source src="multimedia/videos/video2.mp4">
             </video>
         </div>
     </div>
 
     <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
     
-    <footer class="d-inline-flex justify-content-around pt-4 container-fluid"> 
+    <footer class="d-inline-flex justify-content-between container-fluid"> 
         <ul> <!-- contacto -->
-            <li> Telefono </li>
-            <li> Mail </li>
-            <li> Dirección </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/phone.png"/> +54 9 11-3486-1961 </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/message-group.png"/> merceriatefel@gmail.com </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/shop.png"/> Larrea 1121 </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/clock.png"/> Abierto de 10 a 21 </li>
         </ul>
 
         <ul> <!-- metodos de pago -->
-            <li> Crédito </li>
-            <li> Débito </li>
-            <li> Efectivo </li>
-            <li> Mercadopago </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/mastercard-credit-card.png"/> Crédito </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/bank-card-front-side.png"/> Débito </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/cash-.png"/> Efectivo </li>
+            <li> <img src="multimedia/logos/social-media/mp_icon.png"> Mercadopago </li>
         </ul>
 
         <a href="index.html"> <!-- logo con link a index como el logo del header -->
-            <img src="multimedia/logos/main/logo-placeholder.png"> 
+            <img src="multimedia/logos/main/logo_cuadrado.png"> 
         </a> 
  
         <ul> <!-- redes sociales y whatsapp -->
-            <li> Facebook </li>
-            <li> Instagram </li>
-            <li> Twitter </li>
-            <li> Whatsapp </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/facebook-new.png"/> Facebook </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/instagram-new--v1.png"/> Instagram </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/twitter--v1.png"/> Twitter </li>
+            <li> <img src="https://img.icons8.com/color/48/ffffff/whatsapp--v1.png"/> Whatsapp </li>
         </ul>
     </footer>
 

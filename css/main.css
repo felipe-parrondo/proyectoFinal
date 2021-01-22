@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
 body {
   padding: 0;
   margin: 0;
@@ -10,6 +11,14 @@ body {
 /* -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- */
 header {
   background-color: #131A22; }
+  header #header--logoCuadrado {
+    margin: 3vh; }
+  header #header--banner {
+    text-decoration: none;
+    color: #EFD2CB;
+    margin: 6vh;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 800%; }
   header #menu {
     line-height: 3.3rem; }
     header #menu ul #index--index {
@@ -61,13 +70,17 @@ header {
 
 /* -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- */
 footer {
+  padding-top: 3vh;
   background-color: #131A22;
   overflow: hidden; }
   footer a img {
-    max-height: 15vh; }
+    height: 75%; }
   footer ul {
     text-align: left;
-    background-color: #131A22; }
+    background-color: #131A22;
+    padding-left: 0;
+    margin-left: 5vh;
+    margin-right: 5vh; }
     footer ul li {
       list-style: none;
       color: #DDD;
@@ -186,6 +199,8 @@ footer {
 /* -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- */
 #grillaQSomos {
   margin: 6vh; }
+  #grillaQSomos #quienesImagen {
+    text-align: center; }
   #grillaQSomos #loremParcial {
     font-family: 'Roboto', sans-serif;
     font-size: 135%;
@@ -214,7 +229,8 @@ footer {
         transition: 0.3s;
         background: #ffffff;
         margin: 3vh;
-        padding-top: 1vh; }
+        padding-top: 1vh;
+        cursor: pointer; }
         #catalogo .flex--catalogoItems .catalogoItems .catalogoItems--item .catalogoItems--price {
           margin-bottom: 0;
           margin-top: 1vh; }

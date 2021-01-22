@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @import "../node_modules/rfs/scss"; // responsive font size module
 
 $fondo: #131A22;
@@ -18,6 +19,18 @@ body {
 
 header {
     background-color: $fondo;
+
+    #header--logoCuadrado {
+        margin: 3vh;
+    }
+
+    #header--banner {
+        text-decoration: none;
+        color: #EFD2CB;
+        margin: 6vh;
+        font-family: 'Cormorant Garamond', serif;
+        @include rfs (800%, font-size);
+    }
 
     #menu {
         line-height: 3.3rem;
@@ -116,19 +129,23 @@ header {
 /* -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- */
 
 footer {
+    padding-top: 3vh;
     background-color: $fondo;
     overflow: hidden;
 
     a {
 
         img {
-            max-height: 15vh;
+            @include rfs (75%, height);
         }
     }
 
     ul {
         text-align: left;
         background-color: $fondo;
+        padding-left: 0;
+        margin-left: 5vh;
+        margin-right: 5vh;
 
         li {
             list-style: none;
@@ -298,6 +315,10 @@ footer {
 #grillaQSomos {
     margin: 6vh;
 
+    #quienesImagen {
+        text-align: center;
+    }
+
     #loremParcial {
         font-family: 'Roboto', sans-serif;
         @include rfs (135%, font-size);
@@ -338,6 +359,7 @@ footer {
                 background: #ffffff;
                 margin: 3vh;
                 padding-top: 1vh;
+                cursor: pointer;
 
                 .catalogoItems--price {
                     margin-bottom: 0;
