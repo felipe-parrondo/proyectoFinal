@@ -76,14 +76,10 @@ header {
 
 #Index {
 
-    #Index__Titulo {
-        font-family: 'Domine', serif;
-        @include rfs (200%, font-size);
-    }
-
     .Index__Video {
 
         p {
+            @include rfs (130%, font-size);
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             line-height: 3.9vh;
@@ -101,7 +97,7 @@ header {
     
                 #Index__Video--TextoUno--Titulo {
                     text-align: right;
-                    font-family: 'Domine', serif;;
+                    font-family: 'Domine', serif;
                 }
             }
         }
@@ -327,12 +323,6 @@ footer {
         @include rfs (135%, font-size);
         line-height: 180%;
     }
-
-    #loremFullWidth {
-        font-family: 'Roboto', sans-serif;
-        @include rfs (135%, font-size);
-        line-height: 180%; 
-    }
 }
 
 /* -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- */
@@ -340,11 +330,6 @@ footer {
 
 #catalogo {
     margin-top: 2vh;
-
-    #catalogoTitle {
-        margin-left: 2vw;
-        margin-top: 2vw;
-    }
 
     .flex--catalogoItems {
         display: flex;

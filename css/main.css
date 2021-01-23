@@ -39,11 +39,8 @@ header {
       font-weight: 900; }
 
 /* -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- */
-#Index #Index__Titulo {
-  font-family: 'Domine', serif;
-  font-size: 200%; }
-
 #Index .Index__Video p {
+  font-size: 130%;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 3.9vh; }
@@ -201,17 +198,10 @@ footer {
     font-family: 'Roboto', sans-serif;
     font-size: 135%;
     line-height: 180%; }
-  #grillaQSomos #loremFullWidth {
-    font-family: 'Roboto', sans-serif;
-    font-size: 135%;
-    line-height: 180%; }
 
 /* -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- */
 #catalogo {
   margin-top: 2vh; }
-  #catalogo #catalogoTitle {
-    margin-left: 2vw;
-    margin-top: 2vw; }
   #catalogo .flex--catalogoItems {
     display: flex;
     direction: column;
