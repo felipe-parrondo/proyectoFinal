@@ -46,6 +46,9 @@ header {
   font-family: 'Domine', serif;
   font-size: 200%; }
 
+#Index .Index__Video .Index__Video--Outer {
+  border-radius: 10px; }
+
 #Index .Index__Video p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;

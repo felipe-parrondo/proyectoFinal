@@ -87,6 +87,10 @@ header {
 
     .Index__Video {
 
+        .Index__Video--Outer {
+            border-radius: 10px;
+        }
+
         p {
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
