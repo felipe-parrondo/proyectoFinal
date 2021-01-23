@@ -37,17 +37,11 @@ header {
       color: #DDD;
       font-family: 'Roboto', sans-serif;
       font-weight: 900; }
-    header #menu ul li .menu__border:hover {
-      border: #FFFF solid 1px;
-      border-radius: 10px; }
 
 /* -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- */
 #Index #Index__Titulo {
   font-family: 'Domine', serif;
   font-size: 200%; }
-
-#Index .Index__Video .Index__Video--Outer {
-  border-radius: 10px; }
 
 #Index .Index__Video p {
   font-family: 'Roboto', sans-serif;
@@ -90,42 +84,41 @@ footer {
       background-color: #131A22; }
 
 /* -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- */
-#pFrecuentes {
-  padding-left: 2.5%;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly; }
-  #pFrecuentes h3 {
-    margin-top: 7vh;
-    font-family: 'Domine', serif;
-    font-size: 250%; }
-  #pFrecuentes .preguntaMain {
-    border: black solid 1px;
-    margin-top: 3vh; }
-    #pFrecuentes .preguntaMain .pregunta {
-      background-color: gainsboro;
-      font-size: calc(1.275rem + 0.3vw);
-      font-family: 'Domine', serif;
-      padding-left: 0.5%; }
-      @media (min-width: 1200px) {
-        #pFrecuentes .preguntaMain .pregunta {
-          font-size: 1.5rem; } }
-    #pFrecuentes .preguntaMain .preguntaText {
-      font-family: 'Roboto', sans-serif;
-      font-size: 100%;
-      padding-left: 0.5%; }
-
-#redireccionContacto {
-  margin-bottom: 10vh;
-  margin-top: 5vh; }
-  #redireccionContacto #pRedirec {
-    justify-items: center;
-    text-align: center; }
-  #redireccionContacto p {
-    justify-items: center;
-    text-align: center; }
+#FAQ__bg {
+  background-color: #DEE0E0; }
+  #FAQ__bg #FAQ__outerFlex {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEDED;
+    margin-left: 3vw;
+    margin-right: 3vw; }
+    #FAQ__bg #FAQ__outerFlex #FAQ__topInnerFlex {
+      border-bottom: 1px solid #BDBFBF;
+      margin-top: 4vh; }
+    #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2vh;
+      margin-left: 5vh;
+      margin-right: 5vh; }
+      #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex div {
+        min-width: 30vh;
+        min-height: 30vh; }
+        #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex div h1 {
+          font-size: 130%;
+          margin-bottom: 3vh;
+          margin-top: 3vh;
+          color: #E6937E; }
+        #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex div p {
+          margin-bottom: 3vh;
+          width: min-content; }
+          #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex div p a {
+            text-decoration: none;
+            width: auto;
+            color: black; }
+        #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex div p:hover {
+          text-decoration: underline; }
 
 /* -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- */
 @media (min-width: 992px) {
@@ -168,7 +161,7 @@ footer {
     margin-bottom: 7vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; }
+    justify-content: space-evenly; }
     #contacto fieldset {
       font-family: 'Roboto', sans-serif;
       font-weight: 300;

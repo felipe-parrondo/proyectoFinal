@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @import "../node_modules/rfs/scss"; // responsive font size module
 
+$fondoBody: #EAEDED;
 $fondo: #131A22;
 $headerbg: gray;
 
@@ -12,7 +13,7 @@ body {
     margin: 0;
     background: -webkit-linear-gradient(to top, #D4D4D4, #ffffff);
     background: linear-gradient(to top, #D4D4D4, #ffffff);
-    background-color: #EAEDED;
+    background-color: $fondoBody;
 }
 
 /* -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- */
@@ -66,11 +67,6 @@ header {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 900;
                 }
-
-                .menu__border:hover {
-                    border: #FFFF solid 1px;
-                    border-radius: 10px;
-                }
             }
         }
     }
@@ -86,10 +82,6 @@ header {
     }
 
     .Index__Video {
-
-        .Index__Video--Outer {
-            border-radius: 10px;
-        }
 
         p {
             font-family: 'Roboto', sans-serif;
@@ -161,53 +153,60 @@ footer {
 
 /* -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- */
 
-#pFrecuentes {
-    padding-left: 2.5%;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+#FAQ__bg {
+    background-color: #DEE0E0;
 
-    h3 {
-        margin-top: 7vh;
-        font-family: 'Domine', serif;
-        @include rfs (250%, font-size);
-    }
+    #FAQ__outerFlex {
+        display: flex;
+        flex-direction: column;
+        background-color: $fondoBody;
+        margin-left: 3vw;
+        margin-right: 3vw;
 
-    .preguntaMain {
-        border: black solid 1px;
-        margin-top: 3vh;
-
-        .pregunta {
-            background-color: gainsboro;
-            @include rfs (1.5rem, font-size);
-            font-family: 'Domine', serif;
-            @include rfs (0.5%, padding-left);
+        #FAQ__topInnerFlex {
+            border-bottom: 1px solid #BDBFBF;
+            margin-top: 4vh;
         }
 
-        .preguntaText {
-            font-family: 'Roboto', sans-serif;
-            @include rfs (100%, font-size);
-            @include rfs (0.5%, padding-left);
+        .FAQ__innerFlex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2vh;
+            margin-left: 5vh;
+            margin-right: 5vh;
+
+            div {
+                min-width: 30vh;
+                min-height: 30vh;
+
+                h1 {
+                    @include rfs (130%, font-size);
+                    margin-bottom: 3vh;
+                    margin-top: 3vh;
+                    color: #E6937E;
+                }
+
+                p {
+                    margin-bottom: 3vh;
+                    width: min-content;
+
+                    a{
+                        text-decoration: none;
+                        width: auto;
+                        color: black;
+                    }
+                }
+
+                p:hover {
+                    text-decoration: underline;
+                }
+                
+            }
         }
     }
 }
 
-#redireccionContacto {
-    margin-bottom: 10vh;
-    margin-top: 5vh;
-
-    #pRedirec{
-        justify-items: center;
-        text-align: center;
-    }
-
-    p {
-        justify-items: center;
-        text-align: center;
-    }
-}
 
 /* -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- */
 
@@ -267,7 +266,7 @@ footer {
         margin-bottom: 7vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
 
         fieldset {
             font-family: 'Roboto', sans-serif;
