@@ -25,13 +25,28 @@ header {
         margin: 3vh;
     }
 
-    #header--banner {
-        text-decoration: none;
-        color: #EFD2CB;
-        margin: 6vh;
-        font-family: 'Cormorant Garamond', serif;
-        @include rfs (800%, font-size);
+    @media (min-width: 992px) {
+
+        #header--banner {
+            text-decoration: none;
+            color: #EFD2CB;
+            margin: 6vh;
+            font-family: 'Cormorant Garamond', serif;
+            @include rfs (800%, font-size);
+        }
     }
+
+    @media (max-width: 991.9px) {
+
+        #header--banner {
+            text-decoration: none;
+            color: #EFD2CB;
+            margin: 6vh;
+            font-family: 'Cormorant Garamond', serif;
+            @include rfs (200%, font-size);
+        }
+    }
+    
 
     #menu {
         line-height: 3.3rem;
@@ -74,78 +89,172 @@ header {
 
 /* -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- */
 
-#Index {
+@media (min-width: 992px) {
 
-    .Index__Video {
+    #Index {
 
-        p {
-            @include rfs (130%, font-size);
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            line-height: 3.9vh;
-        }
-    }
-
-    #Index__FlexContainer {
+        .Index__Video {
     
-        #Index__Video--VideoUno {
-    
-            #Index__Video--TextoUno {
+            p {
+                @include rfs (130%, font-size);
                 font-family: 'Roboto', sans-serif;
-                text-align: left;
-                @include rfs (170%, font-size);
-    
-                #Index__Video--TextoUno--Titulo {
-                    text-align: right;
-                    font-family: 'Domine', serif;
-                }
+                font-weight: 300;
+                line-height: 3.9vh;
             }
         }
     
-        #Index__Video--VideoDos {
-            text-align: right;
-    
-            #Index__Video--TextoDos {
-                font-family: 'Roboto', sans-serif;
-                text-align: left;
-                @include rfs (170%, font-size);
-    
-                #Index__Video--TextoDos--Titulo {
-                    font-family: 'Domine', serif;;
+        #Index__FlexContainer {
+        
+            #Index__Video--VideoUno {
+        
+                #Index__Video--TextoUno {
+                    font-family: 'Roboto', sans-serif;
+                    text-align: left;
+                    @include rfs (170%, font-size);
+        
+                    #Index__Video--TextoUno--Titulo {
+                        text-align: right;
+                        font-family: 'Domine', serif;
+                    }
+                }
+            }
+        
+            #Index__Video--VideoDos {
+                text-align: right;
+        
+                #Index__Video--TextoDos {
+                    font-family: 'Roboto', sans-serif;
+                    text-align: left;
+                    @include rfs (170%, font-size);
+        
+                    #Index__Video--TextoDos--Titulo {
+                        font-family: 'Domine', serif;;
+                    }
                 }
             }
         }
     }
 }
+
+@media (max-width: 991.9px) {
+
+    #Index {
+
+        .Index__Video {
+    
+            p {
+                @include rfs (100%, font-size);
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                line-height: 3.9vh;
+            }
+        }
+    
+        #Index__FlexContainer {
+        
+            #Index__Video--VideoUno {
+        
+                #Index__Video--TextoUno {
+                    font-family: 'Roboto', sans-serif;
+                    text-align: left;
+                    @include rfs (170%, font-size);
+        
+                    #Index__Video--TextoUno--Titulo {
+                        text-align: right;
+                        font-family: 'Domine', serif;
+                    }
+                }
+            }
+        
+            #Index__Video--VideoDos {
+                text-align: right;
+        
+                #Index__Video--TextoDos {
+                    font-family: 'Roboto', sans-serif;
+                    text-align: left;
+                    @include rfs (170%, font-size);
+        
+                    #Index__Video--TextoDos--Titulo {
+                        font-family: 'Domine', serif;;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 /* -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- */
 
-footer {
-    padding-top: 3vh;
-    background-color: $fondo;
-    overflow: hidden;
+@media (min-width: 992px) {
 
-    a {
-
-        img {
-            @include rfs (75%, height);
-        }
-    }
-
-    ul {
-        text-align: left;
+    footer {
+        padding-top: 3vh;
         background-color: $fondo;
-        padding-left: 0;
-        margin-left: 5vh;
-        margin-right: 5vh;
-
-        li {
-            list-style: none;
-            color: #DDD;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        a {
+    
+            img {
+                @include rfs (75%, height);
+            }
+        }
+    
+        ul {
+            text-align: left;
             background-color: $fondo;
+            padding-left: 0;
+            margin-left: 5vh;
+            margin-right: 5vh;
+    
+            li {
+                list-style: none;
+                color: #DDD;
+                background-color: $fondo;
+            }
         }
     }
 }
+
+@media (max-width: 991.9px) {
+
+    footer {
+        padding-top: 3vh;
+        background-color: $fondo;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        a {
+    
+            img {
+                @include rfs (75%, height);
+            }
+        }
+    
+        ul {
+            text-align: left;
+            background-color: $fondo;
+            padding-left: 0;
+            margin-left: 5vh;
+            margin-right: 5vh;
+            border-bottom: 1px solid #BDBFBF;
+            padding-bottom: 5vh;
+            padding-top: 5vh;
+    
+            li {
+                list-style: none;
+                color: #DDD;
+                background-color: $fondo;
+            }
+        }
+    }
+}
+
 
 /* -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- */
 

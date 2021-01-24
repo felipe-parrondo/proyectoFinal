@@ -13,12 +13,20 @@ header {
   background-color: #131A22; }
   header #header--logoCuadrado {
     margin: 3vh; }
-  header #header--banner {
-    text-decoration: none;
-    color: #EFD2CB;
-    margin: 6vh;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 800%; }
+  @media (min-width: 992px) {
+    header #header--banner {
+      text-decoration: none;
+      color: #EFD2CB;
+      margin: 6vh;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 800%; } }
+  @media (max-width: 991.9px) {
+    header #header--banner {
+      text-decoration: none;
+      color: #EFD2CB;
+      margin: 6vh;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 200%; } }
   header #menu {
     line-height: 3.3rem; }
     header #menu ul #index--index {
@@ -39,46 +47,95 @@ header {
       font-weight: 900; }
 
 /* -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- */
-#Index .Index__Video p {
-  font-size: 130%;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 3.9vh; }
-
-#Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno {
-  font-family: 'Roboto', sans-serif;
-  text-align: left;
-  font-size: 170%; }
-  #Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno #Index__Video--TextoUno--Titulo {
-    text-align: right;
-    font-family: 'Domine', serif; }
-
-#Index #Index__FlexContainer #Index__Video--VideoDos {
-  text-align: right; }
-  #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos {
+@media (min-width: 992px) {
+  #Index .Index__Video p {
+    font-size: 130%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 3.9vh; }
+  #Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno {
     font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 170%; }
-    #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos #Index__Video--TextoDos--Titulo {
+    #Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno #Index__Video--TextoUno--Titulo {
+      text-align: right;
       font-family: 'Domine', serif; }
+  #Index #Index__FlexContainer #Index__Video--VideoDos {
+    text-align: right; }
+    #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos {
+      font-family: 'Roboto', sans-serif;
+      text-align: left;
+      font-size: 170%; }
+      #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos #Index__Video--TextoDos--Titulo {
+        font-family: 'Domine', serif; } }
+
+@media (max-width: 991.9px) {
+  #Index .Index__Video p {
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 3.9vh; }
+  #Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 170%; }
+    #Index #Index__FlexContainer #Index__Video--VideoUno #Index__Video--TextoUno #Index__Video--TextoUno--Titulo {
+      text-align: right;
+      font-family: 'Domine', serif; }
+  #Index #Index__FlexContainer #Index__Video--VideoDos {
+    text-align: right; }
+    #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos {
+      font-family: 'Roboto', sans-serif;
+      text-align: left;
+      font-size: 170%; }
+      #Index #Index__FlexContainer #Index__Video--VideoDos #Index__Video--TextoDos #Index__Video--TextoDos--Titulo {
+        font-family: 'Domine', serif; } }
 
 /* -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- */
-footer {
-  padding-top: 3vh;
-  background-color: #131A22;
-  overflow: hidden; }
-  footer a img {
-    height: 75%; }
-  footer ul {
-    text-align: left;
+@media (min-width: 992px) {
+  footer {
+    padding-top: 3vh;
     background-color: #131A22;
-    padding-left: 0;
-    margin-left: 5vh;
-    margin-right: 5vh; }
-    footer ul li {
-      list-style: none;
-      color: #DDD;
-      background-color: #131A22; }
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    footer a img {
+      height: 75%; }
+    footer ul {
+      text-align: left;
+      background-color: #131A22;
+      padding-left: 0;
+      margin-left: 5vh;
+      margin-right: 5vh; }
+      footer ul li {
+        list-style: none;
+        color: #DDD;
+        background-color: #131A22; } }
+
+@media (max-width: 991.9px) {
+  footer {
+    padding-top: 3vh;
+    background-color: #131A22;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    footer a img {
+      height: 75%; }
+    footer ul {
+      text-align: left;
+      background-color: #131A22;
+      padding-left: 0;
+      margin-left: 5vh;
+      margin-right: 5vh;
+      border-bottom: 1px solid #BDBFBF;
+      padding-bottom: 5vh;
+      padding-top: 5vh; }
+      footer ul li {
+        list-style: none;
+        color: #DDD;
+        background-color: #131A22; } }
 
 /* -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- */
 #FAQ__bg {
