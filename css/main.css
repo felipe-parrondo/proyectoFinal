@@ -167,7 +167,8 @@ header {
             color: #E6937E; }
           #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex div p {
             margin-bottom: 3vh;
-            width: min-content; }
+            width: min-content;
+            cursor: pointer; }
             #FAQ__bg #FAQ__outerFlex .FAQ__innerFlex div p a {
               text-decoration: none;
               width: auto;
@@ -228,6 +229,8 @@ header {
         display: flex;
         flex-direction: column;
         margin-top: 1vh; }
+      #contacto fieldset #boton {
+        flex-direction: row; }
       #contacto fieldset #consulta {
         width: 100%;
         height: 20vh; }
@@ -235,6 +238,12 @@ header {
         display: flex;
         justify-content: space-around;
         margin-top: 2vh; }
+      #contacto fieldset #checkbox {
+        flex-direction: row; }
+        #contacto fieldset #checkbox label {
+          margin-left: 1vh; }
+        #contacto fieldset #checkbox input {
+          margin: auto; }
     #contacto #mapa {
       display: flex;
       flex-direction: column;
@@ -266,9 +275,16 @@ header {
         width: 100%;
         height: 20vh; }
       #contacto fieldset #boton {
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
         margin-top: 2vh; }
+      #contacto fieldset #checkbox {
+        flex-direction: row; }
+        #contacto fieldset #checkbox label {
+          margin-left: 1vh; }
+        #contacto fieldset #checkbox input {
+          margin-top: auto;
+          margin-bottom: auto; }
     #contacto #mapa {
       display: flex;
       flex-direction: column;
@@ -285,17 +301,34 @@ header {
         margin-top: 2vh; } }
 
 /* -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- */
-#QSomos {
-  margin: 6vh;
-  display: flex;
-  flex-direction: column; }
-  #QSomos #QSomos__Imagen {
-    max-width: 100%;
-    height: auto; }
-  #QSomos #QSomos__lorem {
-    font-family: 'Roboto', sans-serif;
-    font-size: 135%;
-    line-height: 180%; }
+@media (min-width: 992px) {
+  #QSomos {
+    margin: 6vh;
+    display: flex;
+    flex-direction: row; }
+    #QSomos #QSomos__imagen img {
+      width: auto;
+      height: auto;
+      border-radius: 10px; }
+    #QSomos #QSomos__lorem {
+      font-family: 'Roboto', sans-serif;
+      font-size: 135%;
+      line-height: 180%;
+      margin-left: 6vh; } }
+
+@media (max-width: 991.9px) {
+  #QSomos {
+    margin: 6vh;
+    display: flex;
+    flex-direction: column; }
+    #QSomos #QSomos__imagen img {
+      width: 100%;
+      height: auto; }
+    #QSomos #QSomos__lorem {
+      margin-top: 6vh;
+      font-family: 'Roboto', sans-serif;
+      font-size: 100%;
+      line-height: 180%; } }
 
 /* -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- */
 @media (min-width: 992px) {
