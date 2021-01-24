@@ -258,64 +258,126 @@ header {
 
 /* -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- */
 
-#FAQ__bg {
-    background-color: #DEE0E0;
+@media (min-width: 992px) {
 
-    #FAQ__outerFlex {
-        display: flex;
-        flex-direction: column;
-        background-color: $fondoBody;
-        margin-left: 3vw;
-        margin-right: 3vw;
-
-        #FAQ__topInnerFlex {
-            border-bottom: 1px solid #BDBFBF;
-            margin-top: 4vh;
-        }
-
-        .FAQ__innerFlex {
+    #FAQ__bg {
+        background-color: #DEE0E0;
+    
+        #FAQ__outerFlex {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 2vh;
-            margin-left: 5vh;
-            margin-right: 5vh;
-
-            div {
-                min-width: 30vh;
-                min-height: 30vh;
-
-                h1 {
-                    @include rfs (130%, font-size);
-                    margin-bottom: 3vh;
-                    margin-top: 3vh;
-                    color: #E6937E;
-                }
-
-                p {
-                    margin-bottom: 3vh;
-                    width: min-content;
-
-                    a{
-                        text-decoration: none;
-                        width: auto;
-                        color: black;
+            flex-direction: column;
+            background-color: $fondoBody;
+            margin-left: 3vw;
+            margin-right: 3vw;
+    
+            #FAQ__topInnerFlex {
+                border-bottom: 1px solid #BDBFBF;
+                margin-top: 4vh;
+            }
+    
+            .FAQ__innerFlex {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 2vh;
+                margin-left: 5vh;
+                margin-right: 5vh;
+    
+                div {
+                    min-width: 30vh;
+                    min-height: 30vh;
+    
+                    h1 {
+                        @include rfs (130%, font-size);
+                        margin-bottom: 3vh;
+                        margin-top: 3vh;
+                        color: #E6937E;
                     }
+    
+                    p {
+                        margin-bottom: 3vh;
+                        width: min-content;
+    
+                        a{
+                            text-decoration: none;
+                            width: auto;
+                            color: black;
+                        }
+                    }
+    
+                    p:hover {
+                        text-decoration: underline;
+                    }
+                    
                 }
+            }
+        }
+    }
+}
 
-                p:hover {
-                    text-decoration: underline;
+@media (max-width: 991.9px) {
+
+    #FAQ__bg {
+        background-color: #DEE0E0;
+    
+        #FAQ__outerFlex {
+            display: flex;
+            flex-direction: column;
+            background-color: $fondoBody;
+            margin-left: 3vw;
+            margin-right: 3vw;
+    
+            #FAQ__topInnerFlex {
+                margin-top: 4vh;
+            }
+    
+            .FAQ__innerFlex {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 2vh;
+                margin-left: 5vh;
+                margin-right: 5vh;
+    
+                div {
+                    min-width: 30vh;
+                    min-height: 30vh;
+                    border-bottom: 1px solid #BDBFBF;
+    
+                    h1 {
+                        @include rfs (130%, font-size);
+                        margin-bottom: 3vh;
+                        margin-top: 3vh;
+                        color: #E6937E;
+                    }
+    
+                    p {
+                        margin-bottom: 3vh;
+                        width: min-content;
+    
+                        a{
+                            text-decoration: none;
+                            width: auto;
+                            color: black;
+                        }
+                    }
+    
+                    p:hover {
+                        text-decoration: underline;
+                    }
+                    
                 }
-                
             }
         }
     }
 }
 
 
+
 /* -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- */
 
 @media (min-width: 992px) {
+
     #contacto {
         margin-top: 7vh;
         margin-bottom: 7vh;
@@ -366,6 +428,7 @@ header {
 }
 
 @media (max-width: 991.9px) {
+
     #contacto {
         margin-top: 7vh;
         margin-bottom: 7vh;
@@ -420,14 +483,17 @@ header {
 
 /* -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- */
 
-#grillaQSomos {
+#QSomos {
     margin: 6vh;
+    display: flex;
+    flex-direction: column;
 
-    #quienesImagen {
-        text-align: center;
+    #QSomos__Imagen {
+        max-width: 100%;
+        height: auto;
     }
 
-    #loremParcial {
+    #QSomos__lorem {
         font-family: 'Roboto', sans-serif;
         @include rfs (135%, font-size);
         line-height: 180%;
@@ -436,61 +502,122 @@ header {
 
 /* -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- */
 
+@media (min-width: 992px) {
 
-#catalogo {
-    margin-top: 2vh;
-
-    .flex--catalogoItems {
-        display: flex;
-        direction: column;
-        justify-content: space-around;
-        margin: 2vh;
+    #catalogo {
+        margin-top: 2vh;
     
-        .catalogoItems {
+        .flex--catalogoItems {
             display: flex;
-            flex-direction: row;
+            direction: column;
             justify-content: space-around;
+            margin: 2vh;
         
-            .catalogoItems--item {
-                transition: 0.3s;
-                background: #ffffff;
-                margin: 3vh;
-                padding-top: 1vh;
-                cursor: pointer;
-
-                .catalogoItems--price {
-                    margin-bottom: 0;
-                    margin-top: 1vh;
+            .catalogoItems {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            
+                .catalogoItems--item {
+                    transition: 0.3s;
+                    background: #ffffff;
+                    margin: 3vh;
+                    padding-top: 1vh;
+                    cursor: pointer;
+    
+                    .catalogoItems--price {
+                        margin-bottom: 0;
+                        margin-top: 1vh;
+                    }
+    
+                    .catalogoItems--desc {
+                        opacity: 0.7;
+                        margin-bottom: 0.1vh;
+                        @include rfs (95%, font-size);
+                    }
+    
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+            
+                    p {
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                        line-height: 3.9vh;
+                        @include rfs (120%, font-size);
+                    }
                 }
-
-                .catalogoItems--desc {
-                    opacity: 0.7;
-                    margin-bottom: 0.1vh;
-                    @include rfs (95%, font-size);
+            
+                .catalogoItems--item:hover {
+                    -webkit-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    transform: scale(1.05);
+                    box-shadow: 0 0 11px rgba(33,33,33,.2); 
                 }
-
-                img {
-                    max-width: 100%;
-                    height: auto;
-                }
-        
-                p {
-                    font-family: 'Roboto', sans-serif;
-                    font-weight: 300;
-                    line-height: 3.9vh;
-                    @include rfs (120%, font-size);
-                }
-            }
-        
-            .catalogoItems--item:hover {
-                -webkit-transform: scale(1.2);
-                -ms-transform: scale(1.2);
-                transform: scale(1.05);
-                box-shadow: 0 0 11px rgba(33,33,33,.2); 
             }
         }
     }
 }
+
+@media (max-width: 991.9px) {
+
+    #catalogo {
+        margin-top: 2vh;
+    
+        .flex--catalogoItems {
+            display: flex;
+            direction: row;
+            justify-content: space-around;
+        
+            .catalogoItems {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            
+                .catalogoItems--item {
+                    transition: 0.3s;
+                    background: #ffffff;
+                    margin-bottom: 3vh;
+                    margin-top: 3vh;
+                    padding-top: 1vh;
+                    cursor: pointer;
+    
+                    .catalogoItems--price {
+                        margin-bottom: 0;
+                        margin-top: 1vh;
+                    }
+    
+                    .catalogoItems--desc {
+                        opacity: 0.7;
+                        margin-bottom: 0.1vh;
+                        @include rfs (95%, font-size);
+                    }
+    
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+            
+                    p {
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 300;
+                        line-height: 3.9vh;
+                        @include rfs (120%, font-size);
+                    }
+                }
+            
+                .catalogoItems--item:hover {
+                    -webkit-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    transform: scale(1.05);
+                    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+                }
+            }
+        }
+    }
+}
+
 
 
 
