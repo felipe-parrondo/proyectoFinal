@@ -1,159 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title> MTF - Preguntas Frecuentes </title>
-    <link rel="icon" href="multimedia/logos/main/logo_cuadrado.png">
+        <title> MTF - Preguntas Frecuentes </title>
+        <link rel="icon" href="multimedia/logos/main/logo_cuadrado.png">
 
-    <meta name="description" content="No te quedes con ninguna duda!">
-    <meta name="keywords" content="TEFEL, MERCERIA, TIJERAS, HILOS, AGUJAS, PIQUETES, ARGENTINA, CABA, PREGUNTAS FRECUENTES">
+        <meta name="description" content="No te quedes con ninguna duda!">
+        <meta name="keywords" content="TEFEL, MERCERIA, TIJERAS, HILOS, AGUJAS, PIQUETES, ARGENTINA, CABA, PREGUNTAS FRECUENTES">
 
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-</head>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script src="script/index.js"></script>
+    </head>
 
-<body>
-    <!-- zona superior de las paginas en el sketch --- común al resto de las páginas -->
-    <header>
-        <div class="container-fluid d-flex justify-content-start">
-            <a href="index.html" id="header--logoCuadrado"> <!-- logo con link a index como el logo del footer -->
-                <img class="img-fluid" src="multimedia/logos/main/logo_cuadrado.png"> 
-            </a>
+    <body>
+        <!-- zona superior de las paginas en el sketch --- común al resto de las páginas -->
+        <header>
+            <div class="container-fluid d-flex justify-content-start">
+                <a href="index.html" id="header--logoCuadrado"> <!-- logo con link a index como el logo del footer -->
+                    <img class="img-fluid" src="multimedia/logos/main/logo_cuadrado.png"> 
+                </a>
 
-            <a href="index.html" id="header--banner"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
-                Merceria Tefel
-            </a>
+                <a href="index.html" id="header--banner"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
+                    Merceria Tefel
+                </a>
+            </div>
+
+            <nav class="container-fluid" id="menu"> <!-- navegación interna del sitio -->
+                <ul class="nav d-flex justify-content-around">
+                    <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
+                    <li class="nav-item menu__border"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
+                    <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
+                    <li class="nav-item menu__border" id="index--pfrecuentes"> <a href="preguntas-frecuentes.html" class="nav-link text-white"> Preguntas Frecuentes </a> </li>
+                    <li class="nav-item menu__border"> <a href="contacto.html" class="nav-link text-white"> Contacto </a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- preguntas random -->
+
+        <div class="container-fluid" id="FAQ__bg">
+            <div id="FAQ__outerFlex">
+                <div class="FAQ__innerFlex" id="FAQ__topInnerFlex">
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+                    
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+                </div>
+
+                <div class="FAQ__innerFlex">
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+                    
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+
+                    <div>
+                        <h1> Categoria </h1>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                        <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <nav class="container-fluid" id="menu"> <!-- navegación interna del sitio -->
-            <ul class="nav d-flex justify-content-around">
-                <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
-                <li class="nav-item menu__border"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
-                <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
-                <li class="nav-item menu__border" id="index--pfrecuentes"> <a href="preguntas-frecuentes.html" class="nav-link text-white"> Preguntas Frecuentes </a> </li>
-                <li class="nav-item menu__border"> <a href="contacto.html" class="nav-link text-white"> Contacto </a> </li>
+        <!-- Modal genérico para simbolizar posibles respuestas -->
+        <div class="modal fade" id="modalFAQ" tabindex="-1" aria-labelledby="modalFAQLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalFAQLabel">Lorem Ipsum</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas omnis quaerat, sint dolore illum praesentium ipsam necessitatibus eius non officia perspiciatis ut illo molestiae voluptatum nihil atque placeat accusamus! </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
+        <footer class="container-fluid"> 
+            <ul> <!-- contacto -->
+                <li> <img src="https://img.icons8.com/color/48/ffffff/phone.png"/> +54 9 11-3486-1961 </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/message-group.png"/> merceriatefel@gmail.com </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/shop.png"/> Larrea 1121 </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/clock.png"/> Abierto de 10 a 21 </li>
             </ul>
-        </nav>
-    </header>
 
-    <!-- preguntas random -->
+            <ul> <!-- metodos de pago -->
+                <li> <img src="https://img.icons8.com/color/48/ffffff/mastercard-credit-card.png"/> Crédito </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/bank-card-front-side.png"/> Débito </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/cash-.png"/> Efectivo </li>
+                <li> <img src="multimedia/logos/social-media/mp_icon.png"> Mercadopago </li>
+            </ul>
 
-    <div class="container-fluid" id="FAQ__bg">
-        <div id="FAQ__outerFlex">
-            <div class="FAQ__innerFlex" id="FAQ__topInnerFlex">
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
-                
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
+            <ul> <!-- redes sociales y whatsapp -->
+                <li> <img src="https://img.icons8.com/color/48/ffffff/facebook-new.png"/> Facebook </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/instagram-new--v1.png"/> Instagram </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/twitter--v1.png"/> Twitter </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/whatsapp--v1.png"/> Whatsapp </li>
+            </ul>
 
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
+            <a href="index.html"> <!-- logo con link a index como el logo del header -->
+                <img src="multimedia/logos/main/logo_cuadrado.png"> 
+            </a> 
+        </footer>
 
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
-            </div>
-
-            <div class="FAQ__innerFlex">
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
-                
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
-
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
-
-                <div>
-                    <h1> Categoria </h1>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                    <a data-bs-toggle="modal" data-bs-target="#modalFAQ"><p> Pregunta </p></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal genérico para simbolizar posibles respuestas -->
-    <div class="modal fade" id="modalFAQ" tabindex="-1" aria-labelledby="modalFAQLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalFAQLabel">Lorem Ipsum</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas omnis quaerat, sint dolore illum praesentium ipsam necessitatibus eius non officia perspiciatis ut illo molestiae voluptatum nihil atque placeat accusamus! </p>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
-    <footer class="container-fluid"> 
-        <ul> <!-- contacto -->
-            <li> <img src="https://img.icons8.com/color/48/ffffff/phone.png"/> +54 9 11-3486-1961 </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/message-group.png"/> merceriatefel@gmail.com </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/shop.png"/> Larrea 1121 </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/clock.png"/> Abierto de 10 a 21 </li>
-        </ul>
-
-        <ul> <!-- metodos de pago -->
-            <li> <img src="https://img.icons8.com/color/48/ffffff/mastercard-credit-card.png"/> Crédito </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/bank-card-front-side.png"/> Débito </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/cash-.png"/> Efectivo </li>
-            <li> <img src="multimedia/logos/social-media/mp_icon.png"> Mercadopago </li>
-        </ul>
-
-        <ul> <!-- redes sociales y whatsapp -->
-            <li> <img src="https://img.icons8.com/color/48/ffffff/facebook-new.png"/> Facebook </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/instagram-new--v1.png"/> Instagram </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/twitter--v1.png"/> Twitter </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/whatsapp--v1.png"/> Whatsapp </li>
-        </ul>
-
-        <a href="index.html"> <!-- logo con link a index como el logo del header -->
-            <img src="multimedia/logos/main/logo_cuadrado.png"> 
-        </a> 
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    </body>
 </html>

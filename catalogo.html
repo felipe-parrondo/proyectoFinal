@@ -1,722 +1,723 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    
-    <title> MTF - Nuestros Productos! </title>
-    <link rel="icon" href="multimedia/logos/main/logo_cuadrado.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        
+        <title> MTF - Nuestros Productos! </title>
+        <link rel="icon" href="multimedia/logos/main/logo_cuadrado.png">
 
-    <meta name="description" content="Navegá nuestros productos y promociones. Descuentos y promociones en todas las categorias!">
-    <meta name="keywords" content="TEFEL, MERCERIA, TIJERAS, HILOS, AGUJAS, PIQUETES, ARGENTINA, CABA, CATALOGO, COMPRAS, DESCUENTOS, PROMOCIONES">
+        <meta name="description" content="Navegá nuestros productos y promociones. Descuentos y promociones en todas las categorias!">
+        <meta name="keywords" content="TEFEL, MERCERIA, TIJERAS, HILOS, AGUJAS, PIQUETES, ARGENTINA, CABA, CATALOGO, COMPRAS, DESCUENTOS, PROMOCIONES">
 
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-</head>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script src="script/index.js"></script>
+    </head>
 
-<body>
-    <!-- zona superior de las paginas en el sketch --- común al resto de las páginas -->
-    <header>
-        <div class="container-fluid d-flex justify-content-start">
-            <a href="index.html" id="header--logoCuadrado"> <!-- logo con link a index como el logo del footer -->
-                <img class="img-fluid" src="multimedia/logos/main/logo_cuadrado.png"> 
-            </a>
-
-            <a href="index.html" id="header--banner"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
-                Merceria Tefel
-            </a>
-        </div>
-
-        <nav class="container-fluid" id="menu"> <!-- navegación interna del sitio -->
-            <ul class="nav d-flex justify-content-around">
-                <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
-                <li class="nav-item menu__border" id="index--catalogo"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
-                <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
-                <li class="nav-item menu__border"> <a href="preguntas-frecuentes.html" class="nav-link text-white"> Preguntas Frecuentes </a> </li>
-                <li class="nav-item menu__border"> <a href="contacto.html" class="nav-link text-white"> Contacto </a> </li>
-            </ul>
-        </nav>
-    </header>
-
-    <div id="catalogo" class="container-fluid ">
-
-        <div class="flex--catalogoItems">
-
-            <div class="catalogoItems"> <!-- tijeras -->
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTMS1">
-                        <img src="multimedia/products/tijera_mundial_negra.jpg"> 
-                        <p class="catalogoItems--price"> $99.99 </p>
-                        <p class="catalogoItems--desc"> Tijera de Sastre </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTMS2">
-                        <img src="multimedia/products/tijera_mundial_roja.jpg"> 
-                        <p class="catalogoItems-price"> $105.50 </p>
-                        <p class="catalogoItems--desc"> Tijera de Sastre </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTMM">
-                        <img src="multimedia/products/tijera_mundial_plateada.jpg"> 
-                        <p class="catalogoItems--price"> $149.99 </p>
-                        <p class="catalogoItems--desc"> Tijera de Modista </p>
-                    </a>
-                </div>
-
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTMS4">
-                        <img src="multimedia/products/tijera_germania_plateada.jpg"> 
-                        <p class="catalogoItems--price"> $170.25 </p>
-                        <p class="catalogoItems--desc"> Tijera de Sastre </p>
-                    </div>
+    <body>
+        <!-- zona superior de las paginas en el sketch --- común al resto de las páginas -->
+        <header>
+            <div class="container-fluid d-flex justify-content-start">
+                <a href="index.html" id="header--logoCuadrado"> <!-- logo con link a index como el logo del footer -->
+                    <img class="img-fluid" src="multimedia/logos/main/logo_cuadrado.png"> 
                 </a>
 
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTMS5">
-                        <img src="multimedia/products/tijera_sastre.jpg"> 
-                        <p class="catalogoItems--price"> $114.99 </p>
-                        <p class="catalogoItems--desc"> Tijera de Sastre </p>
+                <a href="index.html" id="header--banner"> <!-- banner/frase/logo version extendida - también con link a index --- común al resto de las páginas -->
+                    Merceria Tefel
+                </a>
+            </div>
+
+            <nav class="container-fluid" id="menu"> <!-- navegación interna del sitio -->
+                <ul class="nav d-flex justify-content-around">
+                    <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
+                    <li class="nav-item menu__border" id="index--catalogo"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
+                    <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
+                    <li class="nav-item menu__border"> <a href="preguntas-frecuentes.html" class="nav-link text-white"> Preguntas Frecuentes </a> </li>
+                    <li class="nav-item menu__border"> <a href="contacto.html" class="nav-link text-white"> Contacto </a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="catalogo" class="container-fluid ">
+
+            <div class="flex--catalogoItems">
+
+                <div class="catalogoItems"> <!-- tijeras -->
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTMS1">
+                            <img src="multimedia/products/tijera_mundial_negra.jpg"> 
+                            <p class="catalogoItems--price"> $99.99 </p>
+                            <p class="catalogoItems--desc"> Tijera de Sastre </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTMS2">
+                            <img src="multimedia/products/tijera_mundial_roja.jpg"> 
+                            <p class="catalogoItems-price"> $105.50 </p>
+                            <p class="catalogoItems--desc"> Tijera de Sastre </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTMM">
+                            <img src="multimedia/products/tijera_mundial_plateada.jpg"> 
+                            <p class="catalogoItems--price"> $149.99 </p>
+                            <p class="catalogoItems--desc"> Tijera de Modista </p>
+                        </a>
+                    </div>
+
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTMS4">
+                            <img src="multimedia/products/tijera_germania_plateada.jpg"> 
+                            <p class="catalogoItems--price"> $170.25 </p>
+                            <p class="catalogoItems--desc"> Tijera de Sastre </p>
+                        </div>
                     </a>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTMS5">
+                            <img src="multimedia/products/tijera_sastre.jpg"> 
+                            <p class="catalogoItems--price"> $114.99 </p>
+                            <p class="catalogoItems--desc"> Tijera de Sastre </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTPajarito">
+                            <img src="multimedia/products/tijera_pajarito_tornasolada.jpg"> 
+                            <p class="catalogoItems--price"> $120.20 </p>
+                            <p class="catalogoItems--desc"> Tijera Pajarito </p>
+                        </a>
+                    </div>
+
                 </div>
 
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTPajarito">
-                        <img src="multimedia/products/tijera_pajarito_tornasolada.jpg"> 
-                        <p class="catalogoItems--price"> $120.20 </p>
-                        <p class="catalogoItems--desc"> Tijera Pajarito </p>
-                    </a>
+            </div>
+
+            <div class="flex--catalogoItems">
+
+                <div class="catalogoItems"> <!-- merceria en general -->
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTPEntre">
+                            <img src="multimedia/products/tijera_entresacar.jpg"> 
+                            <p class="catalogoItems--price"> $120.20 </p>
+                            <p class="catalogoItems--desc"> Tijera de Peluquería - Entresacar </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTPPulir">
+                            <img src="multimedia/products/tijera_pulir.jpg"> 
+                            <p class="catalogoItems--price"> $120.20 </p>
+                            <p class="catalogoItems--desc"> Tijera de Peluquería - Pulir </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalHBlanco">
+                            <img src="multimedia/products/hilo_blanco.jpg"> 
+                            <p class="catalogoItems--price"> $39.99 </p>
+                            <p class="catalogoItems--desc"> Caja de Hilos Blancos </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalHNegro">
+                            <img src="multimedia/products/hilo_negro.jpg"> 
+                            <p class="catalogoItems--price"> $39.99 </p>
+                            <p class="catalogoItems--desc"> Caja de Hilos Negros </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalAguja">
+                            <img src="multimedia/products/agujas.jpg"> 
+                            <p class="catalogoItems--price"> $49.99 </p>
+                            <p class="catalogoItems--desc"> Pack de Agujas </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalCortahilacha">
+                            <img src="multimedia/products/cortahilacha_negra.jpg"> 
+                            <p class="catalogoItems--price"> $24.99 </p>
+                            <p class="catalogoItems--desc"> Cortahilachas </p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="flex--catalogoItems">
+
+                <div class="catalogoItems">
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalParche">
+                            <img src="multimedia/products/parches.jpg"> 
+                            <p class="catalogoItems--price"> $69.99 </p>
+                            <p class="catalogoItems--desc"> Parches </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalEnhebrador">
+                            <img src="multimedia/products/enhebrador.jpg"> 
+                            <p class="catalogoItems--price"> $64.99 </p>
+                            <p class="catalogoItems--desc"> Enhebradores </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalBoton">
+                            <img src="multimedia/products/botones.jpg"> 
+                            <p class="catalogoItems--price"> $34.99 </p>
+                            <p class="catalogoItems--desc"> Caja de Botones </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalCierre">
+                            <img src="multimedia/products/cierre.jpg"> 
+                            <p class="catalogoItems--price"> $37.50 </p>
+                            <p class="catalogoItems--desc"> Pack de Cierres </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalCMetrica">
+                            <img src="multimedia/products/cinta_metrica.jpg"> 
+                            <p class="catalogoItems--price"> $80.50 </p>
+                            <p class="catalogoItems--desc"> Cinta Métrica </p>
+                        </a>
+                    </div>
+
+                    <div class="container-fluid catalogoItems--item">
+                        <a data-bs-toggle="modal" data-bs-target="#modalCReflectiva">
+                            <img src="multimedia/products/cinta_reflectiva.jpg"> 
+                            <p class="catalogoItems--price"> $87.50 </p>
+                            <p class="catalogoItems--desc"> Cinta Reflectiva </p>
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-        <div class="flex--catalogoItems">
+        <!-- MODALS -->
 
-            <div class="catalogoItems"> <!-- merceria en general -->
+            <!-- TMS 1 -->
+        <div class="modal fade" id="modalTMS1" tabindex="-1" aria-labelledby="modalTMS1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTMS1Label">Tijera de Sastre</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTPEntre">
-                        <img src="multimedia/products/tijera_entresacar.jpg"> 
-                        <p class="catalogoItems--price"> $120.20 </p>
-                        <p class="catalogoItems--desc"> Tijera de Peluquería - Entresacar </p>
-                    </a>
-                </div>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Mundial </p>
+                        <p> <strong>Material:</strong> Filo de Acero con Mango de Plástico</p>
+                        <p> <strong>Medida:</strong> 9" </p>
+                        <p> <strong>Precio:</strong> $99.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalTPPulir">
-                        <img src="multimedia/products/tijera_pulir.jpg"> 
-                        <p class="catalogoItems--price"> $120.20 </p>
-                        <p class="catalogoItems--desc"> Tijera de Peluquería - Pulir </p>
-                    </a>
-                </div>
+                    </div>
 
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalHBlanco">
-                        <img src="multimedia/products/hilo_blanco.jpg"> 
-                        <p class="catalogoItems--price"> $39.99 </p>
-                        <p class="catalogoItems--desc"> Caja de Hilos Blancos </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalHNegro">
-                        <img src="multimedia/products/hilo_negro.jpg"> 
-                        <p class="catalogoItems--price"> $39.99 </p>
-                        <p class="catalogoItems--desc"> Caja de Hilos Negros </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalAguja">
-                        <img src="multimedia/products/agujas.jpg"> 
-                        <p class="catalogoItems--price"> $49.99 </p>
-                        <p class="catalogoItems--desc"> Pack de Agujas </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalCortahilacha">
-                        <img src="multimedia/products/cortahilacha_negra.jpg"> 
-                        <p class="catalogoItems--price"> $24.99 </p>
-                        <p class="catalogoItems--desc"> Cortahilachas </p>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="flex--catalogoItems">
-
-            <div class="catalogoItems">
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalParche">
-                        <img src="multimedia/products/parches.jpg"> 
-                        <p class="catalogoItems--price"> $69.99 </p>
-                        <p class="catalogoItems--desc"> Parches </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalEnhebrador">
-                        <img src="multimedia/products/enhebrador.jpg"> 
-                        <p class="catalogoItems--price"> $64.99 </p>
-                        <p class="catalogoItems--desc"> Enhebradores </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalBoton">
-                        <img src="multimedia/products/botones.jpg"> 
-                        <p class="catalogoItems--price"> $34.99 </p>
-                        <p class="catalogoItems--desc"> Caja de Botones </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalCierre">
-                        <img src="multimedia/products/cierre.jpg"> 
-                        <p class="catalogoItems--price"> $37.50 </p>
-                        <p class="catalogoItems--desc"> Pack de Cierres </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalCMetrica">
-                        <img src="multimedia/products/cinta_metrica.jpg"> 
-                        <p class="catalogoItems--price"> $80.50 </p>
-                        <p class="catalogoItems--desc"> Cinta Métrica </p>
-                    </a>
-                </div>
-
-                <div class="container-fluid catalogoItems--item">
-                    <a data-bs-toggle="modal" data-bs-target="#modalCReflectiva">
-                        <img src="multimedia/products/cinta_reflectiva.jpg"> 
-                        <p class="catalogoItems--price"> $87.50 </p>
-                        <p class="catalogoItems--desc"> Cinta Reflectiva </p>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- MODALS -->
-
-        <!-- TMS 1 -->
-    <div class="modal fade" id="modalTMS1" tabindex="-1" aria-labelledby="modalTMS1Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTMS1Label">Tijera de Sastre</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Mundial </p>
-                    <p> <strong>Material:</strong> Filo de Acero con Mango de Plástico</p>
-                    <p> <strong>Medida:</strong> 9" </p>
-                    <p> <strong>Precio:</strong> $99.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- TMS 2 -->
-    <div class="modal fade" id="modalTMS2" tabindex="-1" aria-labelledby="modalTMS2Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTMS2Label">Tijera de Sastre</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- TMS 2 -->
+        <div class="modal fade" id="modalTMS2" tabindex="-1" aria-labelledby="modalTMS2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTMS2Label">Tijera de Sastre</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Mundial </p>
-                    <p> <strong>Material:</strong> Acero con Mango Pintado</p>
-                    <p> <strong>Medida:</strong> 12" </p>
-                    <p> <strong>Precio:</strong> $105.50 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Mundial </p>
+                        <p> <strong>Material:</strong> Acero con Mango Pintado</p>
+                        <p> <strong>Medida:</strong> 12" </p>
+                        <p> <strong>Precio:</strong> $105.50 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- TMM -->
-    <div class="modal fade" id="modalTMM" tabindex="-1" aria-labelledby="modalTMMLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTMMLabel">Tijera de Modista</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Mundial </p>
-                    <p> <strong>Material:</strong> Acero</p>
-                    <p> <strong>Medida:</strong> 10" </p>
-                    <p> <strong>Precio:</strong> $149.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- TMS4 -->
-    <div class="modal fade" id="modalTMS4" tabindex="-1" aria-labelledby="modalTMS4Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTMS4Label">Tijera de Sastre</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- TMM -->
+        <div class="modal fade" id="modalTMM" tabindex="-1" aria-labelledby="modalTMMLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTMMLabel">Tijera de Modista</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Mundial </p>
-                    <p> <strong>Material:</strong> Acero</p>
-                    <p> <strong>Medida:</strong> 11" </p>
-                    <p> <strong>Precio:</strong> $170.25 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Mundial </p>
+                        <p> <strong>Material:</strong> Acero</p>
+                        <p> <strong>Medida:</strong> 10" </p>
+                        <p> <strong>Precio:</strong> $149.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- TMS5 -->
-    <div class="modal fade" id="modalTMS5" tabindex="-1" aria-labelledby="modalTMS5Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTMS5Label">Tijera de Sastre</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Mundial </p>
-                    <p> <strong>Material:</strong> Filo de Acero con Mango de Plástico</p>
-                    <p> <strong>Medida:</strong> 8" </p>
-                    <p> <strong>Precio:</strong> $114.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- TPajarito -->
-    <div class="modal fade" id="modalTPajarito" tabindex="-1" aria-labelledby="modalTPajaritoLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTPajaritoLabel">Tijera Pajarito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- TMS4 -->
+        <div class="modal fade" id="modalTMS4" tabindex="-1" aria-labelledby="modalTMS4Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTMS4Label">Tijera de Sastre</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Germania </p>
-                    <p> <strong>Material:</strong> Acero Tornasolado</p>
-                    <p> <strong>Medida:</strong> 5" </p>
-                    <p> <strong>Precio:</strong> $120.20 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Mundial </p>
+                        <p> <strong>Material:</strong> Acero</p>
+                        <p> <strong>Medida:</strong> 11" </p>
+                        <p> <strong>Precio:</strong> $170.25 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- TPEntre -->
-    <div class="modal fade" id="modalTPEntre" tabindex="-1" aria-labelledby="modalTPEntreLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTPEntreLabel">Tijera de Peluquería - Entresacar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Germania </p>
-                    <p> <strong>Material:</strong> Acero</p>
-                    <p> <strong>Medida:</strong> 8" </p>
-                    <p> <strong>Precio:</strong> $120.20 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- TPPulir -->
-    <div class="modal fade" id="modalTPPulir" tabindex="-1" aria-labelledby="modalTPPulirLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTPPulirLabel">Tijera de Peluquería - Pulir</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- TMS5 -->
+        <div class="modal fade" id="modalTMS5" tabindex="-1" aria-labelledby="modalTMS5Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTMS5Label">Tijera de Sastre</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Germania </p>
-                    <p> <strong>Material:</strong> Acero</p>
-                    <p> <strong>Medida:</strong> 8" </p>
-                    <p> <strong>Precio:</strong> $120.20 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Mundial </p>
+                        <p> <strong>Material:</strong> Filo de Acero con Mango de Plástico</p>
+                        <p> <strong>Medida:</strong> 8" </p>
+                        <p> <strong>Precio:</strong> $114.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- HBlanco -->
-    <div class="modal fade" id="modalHBlanco" tabindex="-1" aria-labelledby="modalHBlancoLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalHBlancoLabel">Caja de Hilos Blancos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Poliéster</p>
-                    <p> <strong>Color:</strong> Blanco</p>
-                    <p> <strong>Medida:</strong> 4000 metros </p>
-                    <p> <strong>Precio:</strong> $39.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- HNegro -->
-    <div class="modal fade" id="modalHNegro" tabindex="-1" aria-labelledby="modalHNegroLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalHNegroLabel">Caja de Hilos Negros</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- TPajarito -->
+        <div class="modal fade" id="modalTPajarito" tabindex="-1" aria-labelledby="modalTPajaritoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTPajaritoLabel">Tijera Pajarito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Poliéster</p>
-                    <p> <strong>Color:</strong> Negro</p>
-                    <p> <strong>Medida:</strong> 4000 metros </p>
-                    <p> <strong>Precio:</strong> $39.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Germania </p>
+                        <p> <strong>Material:</strong> Acero Tornasolado</p>
+                        <p> <strong>Medida:</strong> 5" </p>
+                        <p> <strong>Precio:</strong> $120.20 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- Aguja -->
-    <div class="modal fade" id="modalAguja" tabindex="-1" aria-labelledby="modalAgujaLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalAgujaLabel">Pack de Agujas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Acero</p>
-                    <p> <strong>Cantidad:</strong> 20</p>
-                    <p> <strong>Medida:</strong> 1" </p>
-                    <p> <strong>Precio:</strong> $49.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- Cortahilacha -->
-    <div class="modal fade" id="modalCortahilacha" tabindex="-1" aria-labelledby="modalCortahilachaLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCortahilachaLabel">Cortahilachas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- TPEntre -->
+        <div class="modal fade" id="modalTPEntre" tabindex="-1" aria-labelledby="modalTPEntreLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTPEntreLabel">Tijera de Peluquería - Entresacar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Germania </p>
-                    <p> <strong>Material:</strong> Acero con Mango de Plástico</p>
-                    <p> <strong>Color:</strong> Negro</p>
-                    <p> <strong>Medida:</strong> 3" </p>
-                    <p> <strong>Precio:</strong> $24.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Germania </p>
+                        <p> <strong>Material:</strong> Acero</p>
+                        <p> <strong>Medida:</strong> 8" </p>
+                        <p> <strong>Precio:</strong> $120.20 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- Parches -->
-    <div class="modal fade" id="modalParche" tabindex="-1" aria-labelledby="modalParcheLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalParcheLabel">Parches</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Tela Reforzada</p>
-                    <p> <strong>Color:</strong> Varios</p>
-                    <p> <strong>Medida:</strong> 5x5 / 10x10 </p>
-                    <p> <strong>Precio:</strong> $69.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- Enhebrador -->
-    <div class="modal fade" id="modalEnhebrador" tabindex="-1" aria-labelledby="modalEnhebradorLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalEnhebradorLabel">Enhebradores</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- TPPulir -->
+        <div class="modal fade" id="modalTPPulir" tabindex="-1" aria-labelledby="modalTPPulirLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTPPulirLabel">Tijera de Peluquería - Pulir</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Madera y Plástico</p>
-                    <p> <strong>Medida:</strong> 5" </p>
-                    <p> <strong>Precio:</strong> $64.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Germania </p>
+                        <p> <strong>Material:</strong> Acero</p>
+                        <p> <strong>Medida:</strong> 8" </p>
+                        <p> <strong>Precio:</strong> $120.20 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- Boton -->
-    <div class="modal fade" id="modalBoton" tabindex="-1" aria-labelledby="modalBotonLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalBotonLabel">Caja de Botones</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Madera y Plástico</p>
-                    <p> <strong>Medida:</strong> 1" - 6" </p>
-                    <p> <strong>Precio:</strong> $34.99 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- Cierre -->
-    <div class="modal fade" id="modalCierre" tabindex="-1" aria-labelledby="modalCierreLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCierreLabel">Pack de Cierres</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- HBlanco -->
+        <div class="modal fade" id="modalHBlanco" tabindex="-1" aria-labelledby="modalHBlancoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalHBlancoLabel">Caja de Hilos Blancos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Tela y Acero</p>
-                    <p> <strong>Medida:</strong> 5 metros </p>
-                    <p> <strong>Precio:</strong> $37.50 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Poliéster</p>
+                        <p> <strong>Color:</strong> Blanco</p>
+                        <p> <strong>Medida:</strong> 4000 metros </p>
+                        <p> <strong>Precio:</strong> $39.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!-- CMetrica -->
-    <div class="modal fade" id="modalCMetrica" tabindex="-1" aria-labelledby="modalCMetricaLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCMetricaLabel">Cinta Métrica</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Genérica </p>
-                    <p> <strong>Material:</strong> Plástico </p>
-                    <p> <strong>Medida:</strong> 10 metros </p>
-                    <p> <strong>Precio:</strong> $80.50 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        <!-- CReflectiva -->
-    <div class="modal fade" id="modalCReflectiva" tabindex="-1" aria-labelledby="modalCReflectivaLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCReflectivaLabel">Cinta Reflectiva</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <!-- HNegro -->
+        <div class="modal fade" id="modalHNegro" tabindex="-1" aria-labelledby="modalHNegroLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalHNegroLabel">Caja de Hilos Negros</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                <div class="modal-body">
-                
-                    <p> <strong>Marca:</strong> Bulfer </p>
-                    <p> <strong>Material:</strong> Plástico Reflectivo</p>
-                    <p> <strong>Medida:</strong> 10 metros </p>
-                    <p> <strong>Precio:</strong> $87.50 </p>
-                    <p> <strong>Stock:</strong> Disponible </p>
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Poliéster</p>
+                        <p> <strong>Color:</strong> Negro</p>
+                        <p> <strong>Medida:</strong> 4000 metros </p>
+                        <p> <strong>Precio:</strong> $39.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
 
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- MODALS -->
+
+            <!-- Aguja -->
+        <div class="modal fade" id="modalAguja" tabindex="-1" aria-labelledby="modalAgujaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAgujaLabel">Pack de Agujas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Acero</p>
+                        <p> <strong>Cantidad:</strong> 20</p>
+                        <p> <strong>Medida:</strong> 1" </p>
+                        <p> <strong>Precio:</strong> $49.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Cortahilacha -->
+        <div class="modal fade" id="modalCortahilacha" tabindex="-1" aria-labelledby="modalCortahilachaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCortahilachaLabel">Cortahilachas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Germania </p>
+                        <p> <strong>Material:</strong> Acero con Mango de Plástico</p>
+                        <p> <strong>Color:</strong> Negro</p>
+                        <p> <strong>Medida:</strong> 3" </p>
+                        <p> <strong>Precio:</strong> $24.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Parches -->
+        <div class="modal fade" id="modalParche" tabindex="-1" aria-labelledby="modalParcheLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalParcheLabel">Parches</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Tela Reforzada</p>
+                        <p> <strong>Color:</strong> Varios</p>
+                        <p> <strong>Medida:</strong> 5x5 / 10x10 </p>
+                        <p> <strong>Precio:</strong> $69.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Enhebrador -->
+        <div class="modal fade" id="modalEnhebrador" tabindex="-1" aria-labelledby="modalEnhebradorLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEnhebradorLabel">Enhebradores</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Madera y Plástico</p>
+                        <p> <strong>Medida:</strong> 5" </p>
+                        <p> <strong>Precio:</strong> $64.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Boton -->
+        <div class="modal fade" id="modalBoton" tabindex="-1" aria-labelledby="modalBotonLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBotonLabel">Caja de Botones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Madera y Plástico</p>
+                        <p> <strong>Medida:</strong> 1" - 6" </p>
+                        <p> <strong>Precio:</strong> $34.99 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Cierre -->
+        <div class="modal fade" id="modalCierre" tabindex="-1" aria-labelledby="modalCierreLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCierreLabel">Pack de Cierres</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Tela y Acero</p>
+                        <p> <strong>Medida:</strong> 5 metros </p>
+                        <p> <strong>Precio:</strong> $37.50 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- CMetrica -->
+        <div class="modal fade" id="modalCMetrica" tabindex="-1" aria-labelledby="modalCMetricaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCMetricaLabel">Cinta Métrica</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Genérica </p>
+                        <p> <strong>Material:</strong> Plástico </p>
+                        <p> <strong>Medida:</strong> 10 metros </p>
+                        <p> <strong>Precio:</strong> $80.50 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- CReflectiva -->
+        <div class="modal fade" id="modalCReflectiva" tabindex="-1" aria-labelledby="modalCReflectivaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCReflectivaLabel">Cinta Reflectiva</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                    
+                        <p> <strong>Marca:</strong> Bulfer </p>
+                        <p> <strong>Material:</strong> Plástico Reflectivo</p>
+                        <p> <strong>Medida:</strong> 10 metros </p>
+                        <p> <strong>Precio:</strong> $87.50 </p>
+                        <p> <strong>Stock:</strong> Disponible </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODALS -->
 
 
-    <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
-    <footer class="container-fluid"> 
-        <ul> <!-- contacto -->
-            <li> <img src="https://img.icons8.com/color/48/ffffff/phone.png"/> +54 9 11-3486-1961 </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/message-group.png"/> merceriatefel@gmail.com </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/shop.png"/> Larrea 1121 </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/clock.png"/> Abierto de 10 a 21 </li>
-        </ul>
+        <!-- zona gris del sketch, completar metodos de pago, contacto, logo y redes sociales --- común a el resto de las páginas -->
+        <footer class="container-fluid"> 
+            <ul> <!-- contacto -->
+                <li> <img src="https://img.icons8.com/color/48/ffffff/phone.png"/> +54 9 11-3486-1961 </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/message-group.png"/> merceriatefel@gmail.com </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/shop.png"/> Larrea 1121 </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/clock.png"/> Abierto de 10 a 21 </li>
+            </ul>
 
-        <ul> <!-- metodos de pago -->
-            <li> <img src="https://img.icons8.com/color/48/ffffff/mastercard-credit-card.png"/> Crédito </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/bank-card-front-side.png"/> Débito </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/cash-.png"/> Efectivo </li>
-            <li> <img src="multimedia/logos/social-media/mp_icon.png"> Mercadopago </li>
-        </ul>
+            <ul> <!-- metodos de pago -->
+                <li> <img src="https://img.icons8.com/color/48/ffffff/mastercard-credit-card.png"/> Crédito </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/bank-card-front-side.png"/> Débito </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/cash-.png"/> Efectivo </li>
+                <li> <img src="multimedia/logos/social-media/mp_icon.png"> Mercadopago </li>
+            </ul>
 
-        <ul> <!-- redes sociales y whatsapp -->
-            <li> <img src="https://img.icons8.com/color/48/ffffff/facebook-new.png"/> Facebook </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/instagram-new--v1.png"/> Instagram </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/twitter--v1.png"/> Twitter </li>
-            <li> <img src="https://img.icons8.com/color/48/ffffff/whatsapp--v1.png"/> Whatsapp </li>
-        </ul>
+            <ul> <!-- redes sociales y whatsapp -->
+                <li> <img src="https://img.icons8.com/color/48/ffffff/facebook-new.png"/> Facebook </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/instagram-new--v1.png"/> Instagram </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/twitter--v1.png"/> Twitter </li>
+                <li> <img src="https://img.icons8.com/color/48/ffffff/whatsapp--v1.png"/> Whatsapp </li>
+            </ul>
 
-        <a href="index.html"> <!-- logo con link a index como el logo del header -->
-            <img src="multimedia/logos/main/logo_cuadrado.png"> 
-        </a> 
-    </footer>
+            <a href="index.html"> <!-- logo con link a index como el logo del header -->
+                <img src="multimedia/logos/main/logo_cuadrado.png"> 
+            </a> 
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    </body>
 </html>

@@ -408,3 +408,15 @@ header {
           -ms-transform: scale(1.2);
           transform: scale(1.05);
           box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); } }
+
+/* -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- */
+#carrito__bg div {
+  background-color: #EAEDED;
+  margin-left: 3vw;
+  margin-right: 3vw; }
+  #carrito__bg div #carrito__table--outerDiv {
+    margin: 0; }
+    #carrito__bg div #carrito__table--outerDiv table thead {
+      border-bottom: 1px solid #BDBFBF; }
+      #carrito__bg div #carrito__table--outerDiv table thead tr #carrito__table--product {
+        column-span: 2; }

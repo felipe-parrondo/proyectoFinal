@@ -16,7 +16,9 @@ body {
     background-color: $fondoBody;
 }
 
+
 /* -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- HEADER CSS -------- */
+
 
 header {
     background-color: $fondo;
@@ -87,7 +89,9 @@ header {
     }
 }
 
+
 /* -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- VIDEO CSS -------- */
+
 
 @media (min-width: 992px) {
 
@@ -186,6 +190,7 @@ header {
 
 /* -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- FOOTER CSS -------- */
 
+
 @media (min-width: 992px) {
 
     footer {
@@ -257,6 +262,7 @@ header {
 
 
 /* -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- P FRECUENTES CSS -------- */
+
 
 @media (min-width: 992px) {
 
@@ -374,8 +380,8 @@ header {
 }
 
 
-
 /* -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- CONTACTO CSS -------- */
+
 
 @media (min-width: 992px) {
 
@@ -511,7 +517,9 @@ header {
     }
 }
 
+
 /* -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- Q SOMOS CSS -------- */
+
 
 @media (min-width: 992px) {
 
@@ -566,6 +574,7 @@ header {
 
 
 /* -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- CATALOGO CSS -------- */
+
 
 @media (min-width: 992px) {
 
@@ -684,5 +693,51 @@ header {
 }
 
 
+/* -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- */
 
 
+#carrito__bg {
+
+    div {
+        background-color: $fondoBody;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        
+        #carrito__head {
+            
+        }
+    
+        #carrito__table--outerDiv {
+            margin: 0;
+
+            table {
+    
+                thead {
+                    border-bottom: 1px solid #BDBFBF;
+
+                    tr {
+        
+                        .carrito__table--head {
+                            
+                        }
+        
+                        #carrito__table--product {
+                            column-span: 2;
+                        }
+                    }
+                }
+        
+                tbody {
+        
+                    tr {
+        
+                        .carrito__table--row {
+
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
