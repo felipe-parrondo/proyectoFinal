@@ -12,7 +12,7 @@
         <meta name="keywords" content="TEFEL, MERCERIA, TIJERAS, HILOS, AGUJAS, PIQUETES, ARGENTINA, CABA, LANDING">
 
         <link href="css/main.css" rel="stylesheet" type="text/css">
-        <script src="script/index.js"></script>
+        <!--<script src="script/index.js"></script>-->
     </head>
 
     <body>
@@ -30,7 +30,7 @@
 
             <nav class="container-fluid" id="menu"> <!-- navegación interna del sitio -->
                 <ul class="nav d-flex justify-content-around">
-                    <li class="nav-item menu__border" id="index--index"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
+                    <li class="nav-item menu__border"> <a href="index.html" class="nav-link text-white"> Inicio </a> </li>
                     <li class="nav-item menu__border"> <a href="catalogo.html" class="nav-link text-white"> Cátalogo </a> </li>
                     <li class="nav-item menu__border"> <a href="quienes-somos.html" class="nav-link text-white"> Quienes Somos </a> </li>
                     <li class="nav-item menu__border"> <a href="preguntas-frecuentes.html" class="nav-link text-white"> Preguntas Frecuentes </a> </li>
@@ -40,8 +40,8 @@
         </header>
 
         <div id="carrito__bg">
-            <div class="container-fluid">
-                <div>
+            <div id="carrito__outerFlex">
+                <div class="container-fluid" id="carrito__innerFlex">
                     <h3 id="carrito__head">
                         Carrito
                     </h3>
@@ -49,7 +49,7 @@
                     <div id="carrito__table--outerDiv">
                         <table>
                             <thead>
-                                <tr>
+                                <tr class="carrito__table--row">
                                     <th colspan="2" class="carrito__table--head" id="carrito__table--product"> Producto </th>
                                     <th class="carrito__table--head"> Envio </th>
                                     <th class="carrito__table--head"> Precio </th>
@@ -59,19 +59,23 @@
                                 </tr>
                             </thead>
 
-                            <tbody>
-                                <tr>
-                                    <td class="carrito__table--row"> <img> </td> <!-- Producto photo --> <!-- Under "Producto" -->
-                                    <td class="carrito__table--row"> Nombre </td> <!-- Producto name --> <!-- Under "Producto" -->
-                                    <td class="carrito__table--row"> Costo y Tiempo de Envio </td>
-                                    <td class="carrito__table--row"> Precio del Producto </td>
-                                    <td class="carrito__table--row"> Unidades (agregar un "-" y "+" funcionales a futuro) </td>
-                                    <td class="carrito__table--row"> Total con Envio incluido </td>
-                                    <td class="carrito__table--row"> Icono para sacar item del carrito "X" </td>
+                            <tbody id="carrito__table--body">
+                                <tr class="carrito__table--row">
+                                    <td class="carrito__table--bodyRow"> X <img> </td> <!-- Producto photo --> <!-- Under "Producto" -->
+                                    <td class="carrito__table--bodyRow"> X </td> <!-- Producto name --> <!-- Under "Producto" -->
+                                    <td class="carrito__table--bodyRow"> X </td>
+                                    <td class="carrito__table--bodyRow"> X </td>
+                                    <td class="carrito__table--bodyRow"> X </td>
+                                    <td class="carrito__table--bodyRow"> X </td>
+                                    <td class="carrito__table--bodyRow"> X </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+
+                <div id="carrito__checkout">
+
                 </div>
             </div>
         </div>

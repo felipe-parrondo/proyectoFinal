@@ -697,47 +697,66 @@ header {
 
 
 #carrito__bg {
+    background-color: #DEE0E0;
 
-    div {
+    #carrito__outerFlex {
         background-color: $fondoBody;
         margin-left: 3vw;
         margin-right: 3vw;
         
-        #carrito__head {
+        #carrito__innerFlex {
             
-        }
-    
-        #carrito__table--outerDiv {
-            margin: 0;
-
-            table {
-    
-                thead {
-                    border-bottom: 1px solid #BDBFBF;
-
-                    tr {
+            #carrito__head {
+            
+            }
         
-                        .carrito__table--head {
-                            
-                        }
+            #carrito__table--outerDiv {
+                margin: 0;
+    
+                table {
+                    width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+    
+                    .carrito__table--row {
+                        margin-left: 2vw;
+                        margin-right: 2vw;
+                    }
         
-                        #carrito__table--product {
-                            column-span: 2;
+                    thead {
+                        background-color: green;
+    
+                        tr {
+            
+                            .carrito__table--head {
+                                text-align: center;
+                            }
+            
+                            #carrito__table--product {
+                                column-span: 2;
+                                text-align: center;
+                            }
                         }
                     }
-                }
-        
-                tbody {
-        
-                    tr {
-        
-                        .carrito__table--row {
-
+            
+                    #carrito__table--body {
+    
+                        tr {    
+    
+                            .carrito__table--bodyRow {
+                                margin-left: 1vw;
+                                text-align: center;
+                                border-bottom: 1px solid #BDBFBF;
+                            }
                         }
                     }
                 }
             }
         }
-        
+
+        #carrito__checkout {
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
     }
 }

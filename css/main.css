@@ -410,13 +410,32 @@ header {
           box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); } }
 
 /* -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- */
-#carrito__bg div {
-  background-color: #EAEDED;
-  margin-left: 3vw;
-  margin-right: 3vw; }
-  #carrito__bg div #carrito__table--outerDiv {
-    margin: 0; }
-    #carrito__bg div #carrito__table--outerDiv table thead {
-      border-bottom: 1px solid #BDBFBF; }
-      #carrito__bg div #carrito__table--outerDiv table thead tr #carrito__table--product {
-        column-span: 2; }
+#carrito__bg {
+  background-color: #DEE0E0; }
+  #carrito__bg #carrito__outerFlex {
+    background-color: #EAEDED;
+    margin-left: 3vw;
+    margin-right: 3vw; }
+    #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv {
+      margin: 0; }
+      #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto; }
+        #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table .carrito__table--row {
+          margin-left: 2vw;
+          margin-right: 2vw; }
+        #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table thead {
+          background-color: green; }
+          #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table thead tr .carrito__table--head {
+            text-align: center; }
+          #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table thead tr #carrito__table--product {
+            column-span: 2;
+            text-align: center; }
+        #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table #carrito__table--body tr .carrito__table--bodyRow {
+          margin-left: 1vw;
+          text-align: center;
+          border-bottom: 1px solid #BDBFBF; }
+    #carrito__bg #carrito__outerFlex #carrito__checkout {
+      margin-left: 3vw;
+      margin-right: 3vw; }
