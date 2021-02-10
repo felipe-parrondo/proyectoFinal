@@ -632,6 +632,11 @@ header {
             }
         }
     }
+
+    .modal-body__strong {
+        display: inline;
+        font-weight: bold;
+    }
 }
 
 @media (max-width: 991.9px) {

@@ -27,7 +27,7 @@ function ItemCompras (pic, name, shipp, price, quantity, total) {
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
 
-function compras() {
+function compras() { // función vieja
     let indicador = ""
 
     while(indicador != "0") {
@@ -42,6 +42,16 @@ function compras() {
     
         newItem.push(new ItemCompras (name, quantity))
     }
+}
+
+function eventoAgregarCarrito(obj, quantity) {
+    if (typeof array != "undefined" && array != null && array.length != null && array.length > 0) {
+        var carrito = []
+    }
+
+    let newObject = itemSaveToCompras(obj, quantity)
+
+    carrito.push(newObject)
 }
 
 function itemSaveToCompras(ItemObject, quantity) {
@@ -61,20 +71,48 @@ function itemSaveToCompras(ItemObject, quantity) {
     return newObject
 }
 
-function itemComprasStorage(newObject) {
-    let identi = toString(newObject.id) 
-    let quan = toString(newObject.quantity) 
+function itemComprasStorage(obj) {
+    let identi = toString(obj.id) 
+    let quan = toString(obj.quantity) 
 
-    let final = identi + "/" + quan
+    let final = identi + quan
     
-    sessionStorage.setItem(final)
+    sessionStorage.setItem(identi, final)
+}
+
+function HTMLCarritoBuilder () {
+    let objNotProc = sessionStorage.getItem(identi)
+
+    let objId = objNotProc.slice(0, 6)
+    let objQuantity = objNotProc.slice(6, 8)
+
+
+    let objRef = document.getElementById(objId)                                 //busca el id en los modals de catalogo.html para extraer la información necesaria y formar la tabla
+
+    let tbody = getElementById("carrito__table--body")
+
+    let tr = document.createElement("tr").setAttribute("class", "carrito__table--row")
+
+    for(let i = o; i < 8; i++) {
+        let td = document.createElement("td")
+        td.setAttribute("class", "carrito__table--bodyRow")
+
+        tr.appendChild(td)
+    }
+
+    tbody.appendChild(tr)
 }
 
 
 // CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO
 
+let trExistente = document.getElementsByClassName("carrito__table--row")
 
-var newItem = []
+console.log(trExistente.length)
+
+document.createElement("tr").setAttribute("class", "carrito__table--row")
+
+console.log(trExistente.length)
 
 compras()
 
