@@ -369,8 +369,12 @@ header {
           -ms-transform: scale(1.2);
           transform: scale(1.05);
           box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); }
+  .modal-body__inline {
+    display: block;
+    margin-bottom: 3vh; }
+    .modal-body__inline p {
+      display: inline; }
   .modal-body__strong {
-    display: inline;
     font-weight: bold; } }
 
 @media (max-width: 991.9px) {

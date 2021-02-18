@@ -1,28 +1,3 @@
-// OBJETOS --- OBJETOS --- OBJETOS --- OBJETOS --- OBJETOS --- OBJETOS --- OBJETOS
-
-
-// objeto reservado para almacenar los items del catalogo
-function ItemSave (pic, name, price, material, measure, id) {
-    this.pic = pic
-    this.name = name
-    this.price = price
-    this.material = material
-    this.measure = measure
-    this.id = id  //id de 5 numeros --- los primeros 2 indicando la categoria y los ultimos 3 indicando el item especifico dentro de esa categoria
-}
-
-
-//objeto reservado para guardar los items en el carrito y la información para hacerle display
-function ItemCompras (pic, name, shipp, price, quantity, total) {
-    this.pic = pic
-    this.name = name
-    this.shipp = shipp          // usado para calcular el costo de envío, se va a usar un valor númerico para calcular la distancia del cliente al almacen + tamaño del producto
-    this.price = price
-    this.quantity = quantity
-    this.total = total
-    this.id = id
-}
-
 
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
@@ -44,6 +19,7 @@ function compras() { // función vieja
     }
 }
 
+//secuencia de funciones para que el carrito funcione y construya la tabla de checkout
 function eventoAgregarCarrito(obj, quantity) {
     if (typeof array != "undefined" && array != null && array.length != null && array.length > 0) {
         var carrito = []
@@ -64,7 +40,7 @@ function itemSaveToCompras(ItemObject, quantity) {
     let total = quantity * price
 
 
-    let newObject = new ItemCompras = (pic, name, shipp, price, quantity, total, id)
+    let newObject = new ItemCompras(pic, name, shipp, price, quantity, total, id)
 
     itemComprasStorage(newObject)
 
@@ -80,62 +56,115 @@ function itemComprasStorage(obj) {
     sessionStorage.setItem(identi, final)
 }
 
-function HTMLCarritoBuilder () {
-    let objNotProc = sessionStorage.getItem(identi)
 
-    let objId = objNotProc.slice(0, 6)
-    let objQuantity = objNotProc.slice(6, 8)
+//secuencia de funciones para la construcción del catálogo de forma automática
+function HTMLCatalogoIdenti () {
+    
+    for(let i = 0; i < instanciasItemSave.length; i++){
 
+        let obj = instanciasItemSave[i]
 
-    let objRef = document.getElementById(objId)                                 //busca el id en los modals de catalogo.html para extraer la información necesaria y formar la tabla
+        let objId = obj.id 
 
-    let tbody = getElementById("carrito__table--body")
+        switch(objId) {
+            case "01001":
+                HTMLCatalogoBuilder("modalTMS1Label", obj)
+                break;
+            
+            case "01002":
+                HTMLCatalogoBuilder("modalTMS2Label", obj)
+                break;
 
-    let tr = document.createElement("tr").setAttribute("class", "carrito__table--row")
+            case "01003":
+                HTMLCatalogoBuilder("modalTMMLabel", obj)
+                break;
 
-    for(let i = o; i < 8; i++) {
-        let td = document.createElement("td")
-        td.setAttribute("class", "carrito__table--bodyRow")
+            case "01004":
+                HTMLCatalogoBuilder("modalTMS4Label", obj)
+                break;
 
-        tr.appendChild(td)
+            case "01005":
+                HTMLCatalogoBuilder("modalTMS5Label", obj)
+                break;
+
+            case "01006":
+                HTMLCatalogoBuilder("modalTPajaritoLabel", obj)
+                break;
+
+            case "01007":
+                HTMLCatalogoBuilder("modalTPEntreLabel", obj)
+                break;
+
+            case "01008":
+                HTMLCatalogoBuilder("modalTPPulirLabel", obj)
+                break;
+
+            case "02001":
+                HTMLCatalogoBuilder("modalHBlancoLabel", obj)
+                break;
+            
+            case "02002":
+                HTMLCatalogoBuilder("modalHNegroLabel", obj)
+                break;
+
+            case "03001":
+                HTMLCatalogoBuilder("modalAgujaLabel", obj)
+                break;
+
+            case "04001":
+                HTMLCatalogoBuilder("modalCortahilachaLabel", obj)
+                break;
+
+            case "05001":
+                HTMLCatalogoBuilder("modalParcheLabel", obj)
+                break;
+
+            case "05002":
+                HTMLCatalogoBuilder("modalEnhebradorLabel", obj)
+                break;
+
+            case "06001":
+                HTMLCatalogoBuilder("modalBotonLabel", obj)
+                break;
+
+            case "05003":
+                HTMLCatalogoBuilder("modalCierreLabel", obj)
+                break;
+
+            case "07001":
+                HTMLCatalogoBuilder("modalCMetricaLabel", obj)
+                break;
+
+            case "07002":
+                HTMLCatalogoBuilder("modalCReflectivaLabel", obj)
+                break;
+        }
     }
 
-    tbody.appendChild(tr)
+}
+
+function HTMLCatalogoBuilder(idName, obj) {
+    
+    id = obj.id
+
+    idMarca = id + "__marca"
+    idMaterial = id + "__material"
+    idMedida = id + "__medida"
+    idPrecio = id + "__precio"
+    idStock = id + "__stock"
+
+    console.log(idMarca)
+
+    document.getElementById(idMarca).appendChild(document.createTextNode(obj.marca))
+    document.getElementById(idMaterial).appendChild(document.createTextNode(obj.material))
+    document.getElementById(idMedida).appendChild(document.createTextNode(obj.measure))
+    document.getElementById(idPrecio).appendChild(document.createTextNode(obj.price))
+    document.getElementById(idStock).appendChild(document.createTextNode(obj.stock))
+    document.getElementById(idName).appendChild(document.createTextNode(obj.name))
+
 }
 
 
 // CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO
 
-let trExistente = document.getElementsByClassName("carrito__table--row")
-
-console.log(trExistente.length)
-
-document.createElement("tr").setAttribute("class", "carrito__table--row")
-
-console.log(trExistente.length)
-
-compras()
-
-let seguirComprando = "Y"
-
-while(seguirComprando != "N") {
-
-    seguirComprando = prompt("Desea seguir comprando?", "Y/N")
-
-    if (seguirComprando == "Y") {
-        compras()
-    } else {
-        break
-    }
-}
-
-
-console.log("Usted va a comprar: ")
-
-newItemLength = newItem.length
-
-for (i = 0; i < newItemLength; i++) {
-    let comprasTemp = newItem[i]
-
-    console.log("-" + comprasTemp.quantity + " " + comprasTemp.name)
-}
+HTMLCatalogoIdenti()
