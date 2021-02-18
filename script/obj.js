@@ -69,10 +69,3 @@ instanciasItemSave.push(new ItemSave("", "Caja de Botones", "$34.99", "Madera y 
 instanciasItemSave.push(new ItemSave("", "Cinta Métrica", "$80.50", "Plástico", "10 metros", "07001", "Genérica", "Disponible"))  //CMetrica
 
 instanciasItemSave.push(new ItemSave("", "Cinta Reflectiva", "$87.50", "Plástico Reflectivo", "10 metros", "07002", "Bulfer", "Disponible"))  //CReflectiva
-
-
-
-
-
-
-

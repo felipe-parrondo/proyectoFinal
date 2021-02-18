@@ -1,36 +1,23 @@
 
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
+//secuencia de funciones para tomar la info del usuario de la sección catalogo y almacenarla en el storage
+function itemSaveToCompras(objId, quantity) {
 
-function compras() { // función vieja
-    let indicador = ""
+    let ItemObject
 
-    while(indicador != "0") {
-        let name = prompt("Ingrese que quiere comprar", "Ingrese 0 para finalizar")
-        indicador = name
-    
-        if (indicador == 0) {
+    //recorrer instancias
+    for(let i = 0; i < instanciasItemSave.length; i++) {
+
+        let objTemp = instanciasItemSave[i]
+        console.log(instanciasItemSave[i])
+
+        if(objTemp.id == objId) {
+            ItemObject = instanciasItemSave
             break
         }
-    
-        let quantity = parseInt(prompt("Ingrese cuantas unidades quiere comprar"))
-    
-        newItem.push(new ItemCompras (name, quantity))
-    }
-}
-
-//secuencia de funciones para que el carrito funcione y construya la tabla de checkout
-function eventoAgregarCarrito(obj, quantity) {
-    if (typeof array != "undefined" && array != null && array.length != null && array.length > 0) {
-        var carrito = []
     }
 
-    let newObject = itemSaveToCompras(obj, quantity)
-
-    carrito.push(newObject)
-}
-
-function itemSaveToCompras(ItemObject, quantity) {
     let pic = ItemObject.pic
     let name = ItemObject.name
     let price = ItemObject.price
@@ -43,8 +30,6 @@ function itemSaveToCompras(ItemObject, quantity) {
     let newObject = new ItemCompras(pic, name, shipp, price, quantity, total, id)
 
     itemComprasStorage(newObject)
-
-    return newObject
 }
 
 function itemComprasStorage(obj) {
@@ -53,11 +38,13 @@ function itemComprasStorage(obj) {
 
     let final = identi + quan
     
-    sessionStorage.setItem(identi, final)
+    sessionStorage.setItem(identi, final) //se almacena de esta forma para saber como llamarlo en el carrito, se va a usar un split(). usando el id como key de almacenamiento evito tener un objeto repetido en mi checkout.
+
+    window.location.href = "carrito.html"  //redirección al carrito
 }
 
 
-//secuencia de funciones para la construcción del catálogo de forma automática
+//secuencia de funciones para la construcción del catálogo de forma automática (ponele)
 function HTMLCatalogoIdenti () {
     
     for(let i = 0; i < instanciasItemSave.length; i++){
@@ -67,6 +54,7 @@ function HTMLCatalogoIdenti () {
         let objId = obj.id 
 
         switch(objId) {
+
             case "01001":
                 HTMLCatalogoBuilder("modalTMS1Label", obj)
                 break;
@@ -153,8 +141,6 @@ function HTMLCatalogoBuilder(idName, obj) {
     idPrecio = id + "__precio"
     idStock = id + "__stock"
 
-    console.log(idMarca)
-
     document.getElementById(idMarca).appendChild(document.createTextNode(obj.marca))
     document.getElementById(idMaterial).appendChild(document.createTextNode(obj.material))
     document.getElementById(idMedida).appendChild(document.createTextNode(obj.measure))
@@ -167,4 +153,28 @@ function HTMLCatalogoBuilder(idName, obj) {
 
 // CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO
 
+
 HTMLCatalogoIdenti()
+
+
+// EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS
+
+
+document.getElementById("01001_buy").addEventListener("click", itemSaveToCompras, ["01001", 1])
+document.getElementById("01002_buy").addEventListener("click", itemSaveToCompras, ["01002", 1])
+document.getElementById("01003_buy").addEventListener("click", itemSaveToCompras, ["01003", 1])
+document.getElementById("01004_buy").addEventListener("click", itemSaveToCompras, ["01004", 1])
+document.getElementById("01005_buy").addEventListener("click", itemSaveToCompras, ["01005", 1])
+document.getElementById("01006_buy").addEventListener("click", itemSaveToCompras, ["01006", 1])
+document.getElementById("01007_buy").addEventListener("click", itemSaveToCompras, ["01007", 1])
+document.getElementById("01008_buy").addEventListener("click", itemSaveToCompras, ["01008", 1])
+document.getElementById("02001_buy").addEventListener("click", itemSaveToCompras, ["02001", 1])
+document.getElementById("02002_buy").addEventListener("click", itemSaveToCompras, ["02002", 1])
+document.getElementById("03001_buy").addEventListener("click", itemSaveToCompras, ["03001", 1])
+document.getElementById("04001_buy").addEventListener("click", itemSaveToCompras, ["04001", 1])
+document.getElementById("05001_buy").addEventListener("click", itemSaveToCompras, ["05001", 1])
+document.getElementById("05002_buy").addEventListener("click", itemSaveToCompras, ["05002", 1])
+document.getElementById("05003_buy").addEventListener("click", itemSaveToCompras, ["05003", 1])
+document.getElementById("06001_buy").addEventListener("click", itemSaveToCompras, ["06001", 1])
+document.getElementById("07001_buy").addEventListener("click", itemSaveToCompras, ["07001", 1])
+document.getElementById("07002_buy").addEventListener("click", itemSaveToCompras, ["07002", 1])
