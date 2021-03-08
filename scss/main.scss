@@ -703,6 +703,19 @@ header {
             }
         }
     }
+
+    .modal-body__inline {
+        display: block;
+        margin-bottom: 3vh;
+
+        p {
+            display: inline;
+        }
+    }
+
+    .modal-body__strong {
+        font-weight: bold;
+    }
 }
 
 

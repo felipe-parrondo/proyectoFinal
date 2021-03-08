@@ -414,7 +414,14 @@ header {
           -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
           transform: scale(1.05);
-          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); } }
+          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); }
+  .modal-body__inline {
+    display: block;
+    margin-bottom: 3vh; }
+    .modal-body__inline p {
+      display: inline; }
+  .modal-body__strong {
+    font-weight: bold; } }
 
 /* -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- CARRITO CSS -------- */
 #carrito__bg {

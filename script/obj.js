@@ -32,7 +32,7 @@ function ItemCompras (pic, name, shipp, price, quantity, total) {
 // INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS
 
 
-var instanciasItemSave = []
+var instanciasItemSave = new Array()
 
 instanciasItemSave.push(new ItemSave("", "Tijera de Sastre", "$99.99", "Filo de Acero con Mango de Plástico", '9"', "01001", "Mundial", "Disponible"))  //TMS 1
 

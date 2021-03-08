@@ -5,42 +5,58 @@
 function itemSaveToCompras(objId, quantity) {
 
     let ItemObject
+    let objTemp
 
     //recorrer instancias
     for(let i = 0; i < instanciasItemSave.length; i++) {
 
-        let objTemp = instanciasItemSave[i]
-        console.log(instanciasItemSave[i])
+        objTemp = instanciasItemSave[i] 
 
         if(objTemp.id == objId) {
-            ItemObject = instanciasItemSave
+            ItemObject = instanciasItemSave[i]
             break
         }
     }
 
+    console.log(ItemObject)
+
+    let newPrice = ItemObject.price
+    newPrice = newPrice.slice(1)        //se eleimina el signo "$" para poder operar con el valor numerico
+    let newShipp = parseInt(ItemObject.measure) * 3
+    let newTotal = parseInt(quantity) * parseFloat(newPrice)
+
     let pic = ItemObject.pic
     let name = ItemObject.name
     let price = ItemObject.price
-    let measure = ItemObject.measure
     let id = ItemObject.id
-    let shipp = measure * 3
-    let total = quantity * price
-
+    let shipp = newShipp
+    let total = newTotal
+    console.log(ItemObject.id)
 
     let newObject = new ItemCompras(pic, name, shipp, price, quantity, total, id)
+    newObject.id = ItemObject.id
 
     itemComprasStorage(newObject)
 }
 
 function itemComprasStorage(obj) {
-    let identi = toString(obj.id) 
-    let quan = toString(obj.quantity) 
+
+    console.log(obj)
+
+    let identi = obj.id
+    identi = identi.toString() 
+
+    let quan = obj.quantity
+    quan = quan.toString()
+    
+    console.log(quan)
+    console.log(identi)
 
     let final = identi + quan
     
     sessionStorage.setItem(identi, final) //se almacena de esta forma para saber como llamarlo en el carrito, se va a usar un split(). usando el id como key de almacenamiento evito tener un objeto repetido en mi checkout.
 
-    window.location.href = "carrito.html"  //redirección al carrito
+    //window.location.href = "carrito.html"  //redirección al carrito
 }
 
 
@@ -149,6 +165,32 @@ function HTMLCatalogoBuilder(idName, obj) {
     $("#" + idName).text(obj.name)
 }
 
+//secuencia de funciones para la construcción del carrito/checkout
+
+function carritoOnLoadStorage() {
+
+    for(let i = 0; i < instanciasItemSave.length; i++) {
+
+        let objTemp = instanciasItemSave[i] 
+
+        let newObjectId = localStorage.getItem(objTemp.id)
+
+        carritoBuilder(newObjectId)
+    } 
+}
+
+function carritoBuilder(objId) {
+
+    for(let i = 0; i < instanciasItemSave.length; i++) {
+
+        let objTemp = instanciasItemSave[i] 
+
+        if(objTemp.id == objId) {
+            ItemObject = instanciasItemSave[i]
+            break
+        }
+    }
+}
 
 // CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO
 
