@@ -31,6 +31,7 @@ function ItemCompras (pic, name, shipp, price, quantity, total) {
 
 // INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS --- INSTANCIAS
 
+var instanciasItemCompras = new Array()
 
 var instanciasItemSave = new Array()
 

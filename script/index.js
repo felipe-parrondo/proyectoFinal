@@ -18,8 +18,6 @@ function itemSaveToCompras(objId, quantity) {
         }
     }
 
-    console.log(ItemObject)
-
     let newPrice = ItemObject.price
     newPrice = newPrice.slice(1)        //se eleimina el signo "$" para poder operar con el valor numerico
     let newShipp = parseInt(ItemObject.measure) * 3
@@ -31,33 +29,34 @@ function itemSaveToCompras(objId, quantity) {
     let id = ItemObject.id
     let shipp = newShipp
     let total = newTotal
-    console.log(ItemObject.id)
 
     let newObject = new ItemCompras(pic, name, shipp, price, quantity, total, id)
     newObject.id = ItemObject.id
 
-    itemComprasStorage(newObject)
+    instanciasItemCompras.push(newObject)
+
+    window.location.href = "carrito.html"  //redirección al carrito
+
+    //itemComprasStorage(newObject) //call de la función omitida
 }
 
-function itemComprasStorage(obj) {
 
-    console.log(obj)
-
+    /*se reemplaza el localStorage de cada elemento por un array común a todos los ItemCompras se almacena el array de ItemCompras en formato JSON todo junto
+    function itemComprasStorage(obj) { 
+    
     let identi = obj.id
     identi = identi.toString() 
 
     let quan = obj.quantity
     quan = quan.toString()
     
-    console.log(quan)
-    console.log(identi)
 
     let final = identi + quan
-    
-    sessionStorage.setItem(identi, final) //se almacena de esta forma para saber como llamarlo en el carrito, se va a usar un split(). usando el id como key de almacenamiento evito tener un objeto repetido en mi checkout.
+
+    sessionStorage.setItem(identi, final)
 
     //window.location.href = "carrito.html"  //redirección al carrito
-}
+    }*/
 
 
 //secuencia de funciones para la construcción del catálogo de forma automática (ponele)
@@ -166,30 +165,38 @@ function HTMLCatalogoBuilder(idName, obj) {
 }
 
 //secuencia de funciones para la construcción del carrito/checkout
+    /*function carritoOnLoadStorage() {
 
-function carritoOnLoadStorage() {
+        for(let i = 0; i < instanciasItemSave.length; i++) {
 
-    for(let i = 0; i < instanciasItemSave.length; i++) {
+            let objTemp = instanciasItemSave[i] 
 
-        let objTemp = instanciasItemSave[i] 
+            let newObjectId = localStorage.getItem(objTemp.id)
 
-        let newObjectId = localStorage.getItem(objTemp.id)
+            carritoBuilder(newObjectId)
+        } 
+    }*/
 
-        carritoBuilder(newObjectId)
-    } 
-}
+function HTMLCarritoBuilder() {
 
-function carritoBuilder(objId) {
+    let objTemp
 
-    for(let i = 0; i < instanciasItemSave.length; i++) {
+    for(let i = 0; i < instanciasItemCompras.length; i++) {
 
-        let objTemp = instanciasItemSave[i] 
+        objTemp = instanciasItemCompras[i]
 
-        if(objTemp.id == objId) {
-            ItemObject = instanciasItemSave[i]
-            break
+        let parent = $("#carrito__table--body")
+        let classLength = $(".carrito__table--bodyRow")
+
+        console.log(classLength.length)
+
+        for(let i = 0; i < classLength.length; i++) {
+
         }
     }
+
+    //let obj = $("#" + objId)
+
 }
 
 // CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO
@@ -219,3 +226,5 @@ $("#05003_buy").click( function() { itemSaveToCompras("05003", 1) })
 $("#06001_buy").click( function() { itemSaveToCompras("06001", 1) })
 $("#07001_buy").click( function() { itemSaveToCompras("07001", 1) })
 $("#07002_buy").click( function() { itemSaveToCompras("07002", 1) })
+
+$("#body__carrito").onload( function() { HTMLCarritoBuilder() })
