@@ -35,29 +35,12 @@ function itemSaveToCompras(objId, quantity) {
 
     instanciasItemCompras.push(newObject)
 
+    let saveStorage = JSON.stringify(instanciasItemCompras)
+
+    sessionStorage.setItem("carrito", saveStorage)
+
     window.location.href = "carrito.html"  //redirección al carrito
-
-    //itemComprasStorage(newObject) //call de la función omitida
 }
-
-
-    /*se reemplaza el localStorage de cada elemento por un array común a todos los ItemCompras se almacena el array de ItemCompras en formato JSON todo junto
-    function itemComprasStorage(obj) { 
-    
-    let identi = obj.id
-    identi = identi.toString() 
-
-    let quan = obj.quantity
-    quan = quan.toString()
-    
-
-    let final = identi + quan
-
-    sessionStorage.setItem(identi, final)
-
-    //window.location.href = "carrito.html"  //redirección al carrito
-    }*/
-
 
 //secuencia de funciones para la construcción del catálogo de forma automática (ponele)
 function HTMLCatalogoIdenti () {
@@ -181,50 +164,66 @@ function HTMLCarritoBuilder() {
 
     let objTemp
 
-    for(let i = 0; i < instanciasItemCompras.length; i++) {
+    let arrayTemp = sessionStorage.getItem("carrito")
 
-        objTemp = instanciasItemCompras[i]
+    arrayTemp = JSON.parse(arrayTemp)
 
-        let parent = $("#carrito__table--body")
-        let classLength = $(".carrito__table--bodyRow")
+    console.log(arrayTemp[0])
 
-        console.log(classLength.length)
+    objTemp = arrayTemp[i]
 
-        for(let i = 0; i < classLength.length; i++) {
 
-        }
-    }
 
-    //let obj = $("#" + objId)
+    let parent = $("#carrito__table--body")
 
+    let underParent = $("<tr></tr>").addClass("carrito__table--row")
+
+    let tdPic = $("<td></td>").append("<img src=" + objTemp.pic  + ">")
+
+    let tdName = $("<td></td>").text((objTemp.name).toString())
+
+    let tdShipp = $("<td></td>").text((objTemp.shipp).toString())
+
+    let tdPrice = $("<td></td>").text("$" + (objTemp.price).toString())
+
+    let tdQuantity = $("<td></td>").text((objTemp.quantity).toString())
+
+    let tdTotal = $("<td></td>").text("$" +(objTemp.total).toString())
+
+    underParent.append(tdPic, tdName, tdShipp, tdPrice, tdQuantity, tdTotal)
+
+    parent.append(underParent)
+
+    $("#carrito__table--body > .carrito__table--row").addClass("carrito__table--bodyRow")
 }
+
+
+// EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS
+
+
+$("#01001_buy").click( function() { itemSaveToCompras("01001", 1); HTMLCarritoBuilder() })
+$("#01002_buy").click( function() { itemSaveToCompras("01002", 1); HTMLCarritoBuilder() })
+$("#01003_buy").click( function() { itemSaveToCompras("01003", 1); HTMLCarritoBuilder() })
+$("#01004_buy").click( function() { itemSaveToCompras("01004", 1); HTMLCarritoBuilder() })
+$("#01005_buy").click( function() { itemSaveToCompras("01005", 1); HTMLCarritoBuilder() })
+$("#01006_buy").click( function() { itemSaveToCompras("01006", 1); HTMLCarritoBuilder() })
+$("#01007_buy").click( function() { itemSaveToCompras("01007", 1); HTMLCarritoBuilder() })
+$("#01008_buy").click( function() { itemSaveToCompras("01008", 1); HTMLCarritoBuilder() })
+$("#02001_buy").click( function() { itemSaveToCompras("02001", 1); HTMLCarritoBuilder() })
+$("#02002_buy").click( function() { itemSaveToCompras("02002", 1); HTMLCarritoBuilder() })
+$("#03001_buy").click( function() { itemSaveToCompras("03001", 1); HTMLCarritoBuilder() })
+$("#04001_buy").click( function() { itemSaveToCompras("04001", 1); HTMLCarritoBuilder() })
+$("#05001_buy").click( function() { itemSaveToCompras("05001", 1); HTMLCarritoBuilder() })
+$("#05002_buy").click( function() { itemSaveToCompras("05002", 1); HTMLCarritoBuilder() })
+$("#05003_buy").click( function() { itemSaveToCompras("05003", 1); HTMLCarritoBuilder() })
+$("#06001_buy").click( function() { itemSaveToCompras("06001", 1); HTMLCarritoBuilder() })
+$("#07001_buy").click( function() { itemSaveToCompras("07001", 1); HTMLCarritoBuilder() })
+$("#07002_buy").click( function() { itemSaveToCompras("07002", 1); HTMLCarritoBuilder() })
+
 
 // CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO --- CODIGO
 
 
 HTMLCatalogoIdenti()
 
-
-// EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS
-
-
-$("#01001_buy").click( function() { itemSaveToCompras("01001", 1) })
-$("#01002_buy").click( function() { itemSaveToCompras("01002", 1) })
-$("#01003_buy").click( function() { itemSaveToCompras("01003", 1) })
-$("#01004_buy").click( function() { itemSaveToCompras("01004", 1) })
-$("#01005_buy").click( function() { itemSaveToCompras("01005", 1) })
-$("#01006_buy").click( function() { itemSaveToCompras("01006", 1) })
-$("#01007_buy").click( function() { itemSaveToCompras("01007", 1) })
-$("#01008_buy").click( function() { itemSaveToCompras("01008", 1) })
-$("#02001_buy").click( function() { itemSaveToCompras("02001", 1) })
-$("#02002_buy").click( function() { itemSaveToCompras("02002", 1) })
-$("#03001_buy").click( function() { itemSaveToCompras("03001", 1) })
-$("#04001_buy").click( function() { itemSaveToCompras("04001", 1) })
-$("#05001_buy").click( function() { itemSaveToCompras("05001", 1) })
-$("#05002_buy").click( function() { itemSaveToCompras("05002", 1) })
-$("#05003_buy").click( function() { itemSaveToCompras("05003", 1) })
-$("#06001_buy").click( function() { itemSaveToCompras("06001", 1) })
-$("#07001_buy").click( function() { itemSaveToCompras("07001", 1) })
-$("#07002_buy").click( function() { itemSaveToCompras("07002", 1) })
-
-$("#body__carrito").onload( function() { HTMLCarritoBuilder() })
+HTMLCarritoBuilder()
