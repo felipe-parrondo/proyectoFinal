@@ -37,9 +37,77 @@ function itemSaveToCompras(objId, quantity) {
 
     let saveStorage = JSON.stringify(instanciasItemCompras)
 
-    sessionStorage.setItem("carrito", saveStorage)
+    $("#01002_buy").click(function() {
+        $.ajax ({
 
-    window.location.href = "carrito.html"  //redirección al carrito
+            url: "./carrito.json",
+            type: "POST",
+            data: saveStorage,
+            dataType: "json"
+    
+        })  .done( function(r){ 
+            console.log(r) 
+            })
+
+            .fail( function(xhr, status, error){
+                console.log(xhr)
+                console.log(status)
+                console.log(error)
+            })
+    })
+    
+
+    //window.location.href = "carrito.html"  //redirección al carrito
+}
+
+//secuencia de funciones para la construcción del carrito/checkout
+    /*function carritoOnLoadStorage() {
+
+        for(let i = 0; i < instanciasItemSave.length; i++) {
+
+            let objTemp = instanciasItemSave[i] 
+
+            let newObjectId = localStorage.getItem(objTemp.id)
+
+            carritoBuilder(newObjectId)
+        } 
+    }*/
+
+function HTMLCarritoBuilder() {
+
+    let objTemp
+
+    let arrayTemp = sessionStorage.getItem("carrito")
+
+    arrayTemp = JSON.parse(arrayTemp)
+
+
+    for(let i = 0; i < arrayTemp.length; i++) {
+
+        objTemp = arrayTemp[i]
+
+        let parent = $("#carrito__table--body")
+
+        let underParent = $("<tr></tr>").addClass("carrito__table--row")
+
+        let tdPic = $("<td></td>").append("<img src=" + objTemp.pic  + ">")
+
+        let tdName = $("<td></td>").text((objTemp.name).toString())
+
+        let tdShipp = $("<td></td>").text((objTemp.shipp).toString())
+
+        let tdPrice = $("<td></td>").text("$" + (objTemp.price).toString())
+
+        let tdQuantity = $("<td></td>").text((objTemp.quantity).toString())
+
+        let tdTotal = $("<td></td>").text("$" +(objTemp.total).toString())
+
+        underParent.append(tdPic, tdName, tdShipp, tdPrice, tdQuantity, tdTotal)
+
+        parent.append(underParent)
+
+        $("#carrito__table--body > .carrito__table--row").addClass("carrito__table--bodyRow")
+    }
 }
 
 //secuencia de funciones para la construcción del catálogo de forma automática (ponele)
@@ -147,56 +215,6 @@ function HTMLCatalogoBuilder(idName, obj) {
     $("#" + idName).text(obj.name)
 }
 
-//secuencia de funciones para la construcción del carrito/checkout
-    /*function carritoOnLoadStorage() {
-
-        for(let i = 0; i < instanciasItemSave.length; i++) {
-
-            let objTemp = instanciasItemSave[i] 
-
-            let newObjectId = localStorage.getItem(objTemp.id)
-
-            carritoBuilder(newObjectId)
-        } 
-    }*/
-
-function HTMLCarritoBuilder() {
-
-    let objTemp
-
-    let arrayTemp = sessionStorage.getItem("carrito")
-
-    arrayTemp = JSON.parse(arrayTemp)
-
-    console.log(arrayTemp[0])
-
-    objTemp = arrayTemp[i]
-
-
-
-    let parent = $("#carrito__table--body")
-
-    let underParent = $("<tr></tr>").addClass("carrito__table--row")
-
-    let tdPic = $("<td></td>").append("<img src=" + objTemp.pic  + ">")
-
-    let tdName = $("<td></td>").text((objTemp.name).toString())
-
-    let tdShipp = $("<td></td>").text((objTemp.shipp).toString())
-
-    let tdPrice = $("<td></td>").text("$" + (objTemp.price).toString())
-
-    let tdQuantity = $("<td></td>").text((objTemp.quantity).toString())
-
-    let tdTotal = $("<td></td>").text("$" +(objTemp.total).toString())
-
-    underParent.append(tdPic, tdName, tdShipp, tdPrice, tdQuantity, tdTotal)
-
-    parent.append(underParent)
-
-    $("#carrito__table--body > .carrito__table--row").addClass("carrito__table--bodyRow")
-}
-
 
 // EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS
 
@@ -227,3 +245,5 @@ $("#07002_buy").click( function() { itemSaveToCompras("07002", 1); HTMLCarritoBu
 HTMLCatalogoIdenti()
 
 HTMLCarritoBuilder()
+
+console.log()
