@@ -18,7 +18,7 @@ function ItemSave (pic, name, price, material, measure, id, marca, stock) {
 
 
 //objeto reservado para guardar los items en el carrito y la información para hacerle display
-function ItemCompras (pic, name, shipp, price, quantity, total) {
+function ItemCompras (pic, name, shipp, price, quantity, total, id) {
     this.pic = pic
     this.name = name
     this.shipp = shipp          // usado para calcular el costo de envío, se va a usar un valor númerico para calcular la distancia del cliente al almacen + tamaño del producto
