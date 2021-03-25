@@ -22,8 +22,6 @@ function HTMLCarritoBuilder() {
         let tdTotal = "$" +(objTemp.total).toString()
 
         let infoArray = [tdPic, tdName, tdShipp, tdPrice, tdQuantity, tdTotal]
-        
-
 
         let parent = $("#carrito__table--body")
 
@@ -53,10 +51,8 @@ function HTMLCarritoBuilder() {
 
 //CODIGO
 
-$(document).ready(function() {
+$(document).on("load", function() {
 
     HTMLCarritoBuilder()
 
 })
-
-$()

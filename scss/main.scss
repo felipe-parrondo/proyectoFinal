@@ -640,11 +640,19 @@ header {
         p {
             display: inline;
         }
+
+        .modal-body__strong {
+            font-weight: bold;
+        }
+
+        .modal-body__quant {
+            border-radius: 10px;
+            max-width: 4vh;
+            text-align: center;
+        }
     }
 
-    .modal-body__strong {
-        font-weight: bold;
-    }
+    
 }
 
 @media (max-width: 991.9px) {

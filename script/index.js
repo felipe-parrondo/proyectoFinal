@@ -2,8 +2,33 @@
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
 //secuencia de funciones para tomar la info del usuario de la sección catalogo y almacenarla en el storage
+function cargaArray (id) {
 
-function itemSaveToCompras(objId, quantity) {           //nose por que, pero se ejecuta dos veces la funcion
+    let arrayID = []
+
+    let falseFactor = 0
+
+    for(let j = 0; j < instanciasItemCompras.length; j++) {
+
+        let instancia = instanciasItemCompras[j]
+
+        arrayID[j] = instancia.id
+
+    }
+
+    for(let j = 0; j < arrayID.length; j++) {
+
+        if (arrayID[j] == id) {
+            return 0
+        } else {
+            falseFactor = 1
+        }
+    }
+
+    return falseFactor
+}
+
+function itemSaveToCompras(objId, quantity) {           //nose por que, pero se ejecuta dos veces la funcion //solucionado
 
     let ItemObject
     let objTemp
@@ -20,7 +45,7 @@ function itemSaveToCompras(objId, quantity) {           //nose por que, pero se 
     }
 
     let newPrice = ItemObject.price
-    newPrice = newPrice.slice(1)        //se eleimina el signo "$" para poder operar con el valor numerico
+    newPrice = newPrice.slice(1)        //se elimina el signo "$" para poder operar con el valor numerico
     let newShipp = parseInt(ItemObject.measure) * 3
     let newTotal = parseInt(quantity) * parseFloat(newPrice)
 
@@ -31,13 +56,28 @@ function itemSaveToCompras(objId, quantity) {           //nose por que, pero se 
     let shipp = newShipp
     let total = newTotal
 
-    instanciasItemCompras.push(
-        new ItemCompras(pic, name, shipp, price, quantity, total, id)
-    )
+    let trueFactor = cargaArray(id)
+
+    console.log(trueFactor)
+
+    if(instanciasItemCompras.length == 0) {
+
+        instanciasItemCompras.push(new ItemCompras(pic, name, shipp, price, quantity, total, id))
+
+    } else {
+
+        if(trueFactor == 1) {
+
+            instanciasItemCompras.push(new ItemCompras(pic, name, shipp, price, quantity, total, id))
+
+        } else {
+
+            alert("Item ya selecionado!")
+
+        }
+    }  
 
     console.log(instanciasItemCompras)
-    
-    //window.location.href = "carrito.html"  //redirección al carrito
 }
 
 //secuencia de funciones para la construcción del catálogo de forma automática (ponele)

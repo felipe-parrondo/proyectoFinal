@@ -374,8 +374,12 @@ header {
     margin-bottom: 3vh; }
     .modal-body__inline p {
       display: inline; }
-  .modal-body__strong {
-    font-weight: bold; } }
+    .modal-body__inline .modal-body__strong {
+      font-weight: bold; }
+    .modal-body__inline .modal-body__quant {
+      border-radius: 10px;
+      max-width: 4vh;
+      text-align: center; } }
 
 @media (max-width: 991.9px) {
   #catalogo {
