@@ -1,6 +1,56 @@
 
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
+
+function HTMLCarritoBuilder() {
+
+    for(let i = 0; i < instanciasItemCompras.length; i++) {
+
+        let objTemp = instanciasItemCompras[i]
+
+        
+        let tdPic = "<img src=" + objTemp.pic + ">"
+
+        let tdName = (objTemp.name).toString()
+
+        let tdShipp = (objTemp.shipp).toString()
+
+        let tdPrice = "$" + (objTemp.price).toString()
+
+        let tdQuantity = (objTemp.quantity).toString()
+
+        let tdTotal = "$" +(objTemp.total).toString()
+
+        let infoArray = [tdPic, tdName, tdShipp, tdPrice, tdQuantity, tdTotal]
+
+        let parent = $("#carrito__table--body")
+
+        parent.append("<tr></tr>")
+
+        $("#carrito__table--body tr").addClass("carrito__table--row")
+
+        let underParent = $(".carrito__table--row")
+
+        console.log(underParent[0])
+
+        for(let o = 0; o < 6; o++) {
+
+            underParent.append("<td></td>")
+
+        }
+
+        let tableArray = $(".carrito__table--row td")
+        
+        for(let o = 0; o < tableArray.length; o++) {
+
+            tableArray[o].addClass("carrito__table--bodyRow")
+
+            tableArray[o].append(infoArray[o])
+
+        }
+    }
+}
+
 //secuencia de funciones para tomar la info del usuario de la sección catalogo y almacenarla en el storage
 function cargaArray (id) {
 
@@ -183,14 +233,30 @@ function HTMLCatalogoBuilder(idName, obj) {
     $("#" + idPrecio).text(obj.price)
     $("#" + idStock).text(obj.stock)
     $("#" + idName).text(obj.name)
+
+}
+
+function cargaMemoria() {
+
+    let stringTemp = JSON.stringify(instanciasItemCompras)
+
+    Storage.setItem("compras", stringTemp)
+
 }
 
 
 // EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS --- EVENTOS
 
+
 $(document).ready(function() {
 
-    $("#01001_buy").on("click", ( function() { itemSaveToCompras("01001", 1) }))  
+    $("#01001_buy").on("click", ( function() { 
+        itemSaveToCompras("01001", 1) 
+        cargaMemoria()
+        location.href= "/carrito.html"
+        alert("veamos que pasa")
+    }))  
+
     $("#01002_buy").on("click", ( function() { itemSaveToCompras("01002", 1) }))
     $("#01003_buy").on("click", ( function() { itemSaveToCompras("01003", 1) }))
     $("#01004_buy").on("click", ( function() { itemSaveToCompras("01004", 1) }))
