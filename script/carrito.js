@@ -1,10 +1,16 @@
 $(document).ready( function() {
 
-    $.ajax({
+    /*$.ajax({
         url: "index.js",
         dataType: "script",
-    })
+    })*/
 
-    HTMLCarritoBuilder()
+    let comprasString = sessionStorage.getItem("compras")
+
+    comprasString = JSON.parse(comprasString)
+
+    console.log(comprasString)
+
+    comprasString.forEach(HTMLCarritoBuilder)
 
 })

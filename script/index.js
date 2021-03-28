@@ -2,52 +2,50 @@
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
 
-function HTMLCarritoBuilder() {
+function HTMLCarritoBuilder(currentValue, index) {
 
-    for(let i = 0; i < instanciasItemCompras.length; i++) {
+    let objTemp = currentValue
+    
+    let tdPic = "<img src=" + objTemp.pic + ">"
 
-        let objTemp = instanciasItemCompras[i]
+    let tdName = (objTemp.name).toString()
 
-        
-        let tdPic = "<img src=" + objTemp.pic + ">"
+    let tdShipp = "$" + (objTemp.shipp).toString()
 
-        let tdName = (objTemp.name).toString()
+    let tdPrice = (objTemp.price).toString()
 
-        let tdShipp = (objTemp.shipp).toString()
+    let tdQuantity = (objTemp.quantity).toString()
 
-        let tdPrice = "$" + (objTemp.price).toString()
+    let tdTotal = "$" + (objTemp.total).toString()
 
-        let tdQuantity = (objTemp.quantity).toString()
+    let infoArray = [tdPic, tdName, tdShipp, tdPrice, tdQuantity, tdTotal]
 
-        let tdTotal = "$" +(objTemp.total).toString()
+    let parent = $("#carrito__table--body")
 
-        let infoArray = [tdPic, tdName, tdShipp, tdPrice, tdQuantity, tdTotal]
+    parent.append("<tr></tr>")
 
-        let parent = $("#carrito__table--body")
+    $("#carrito__table--body tr").addClass("carrito__table--row")
 
-        parent.append("<tr></tr>")
+    let underParent = $(".carrito__table--row")
 
-        $("#carrito__table--body tr").addClass("carrito__table--row")
+    underParent = underParent[underParent.length - 1]
 
-        let underParent = $(".carrito__table--row")
+    console.log(underParent)
 
-        console.log(underParent[0])
+    for(let o = 0; o < 7; o++) {
 
-        for(let o = 0; o < 6; o++) {
+        $("<td> </td>").appendTo(underParent)
 
-            underParent.append("<td></td>")
+    }
 
-        }
+    let tableArray = $(".carrito__table--row td")
+    
+    for(let j = 0; j < tableArray.length; j++) {
 
-        let tableArray = $(".carrito__table--row td")
-        
-        for(let o = 0; o < tableArray.length; o++) {
+        $(tableArray[j]).addClass("carrito__table--bodyRow")
 
-            tableArray[o].addClass("carrito__table--bodyRow")
+        $(tableArray[j + (index * 7)]).append(infoArray[j])
 
-            tableArray[o].append(infoArray[o])
-
-        }
     }
 }
 
@@ -95,9 +93,17 @@ function itemSaveToCompras(objId, quantity) {           //nose por que, pero se 
     }
 
     let newPrice = ItemObject.price
+
     newPrice = newPrice.slice(1)        //se elimina el signo "$" para poder operar con el valor numerico
+
     let newShipp = parseInt(ItemObject.measure) * 3
-    let newTotal = parseInt(quantity) * parseFloat(newPrice)
+
+    if(newShipp > 100) {
+        newShipp = newShipp / 1000
+    }
+
+    let newTotal = (parseInt(quantity) * parseFloat(newPrice)) + parseInt(newShipp)
+
 
     let pic = ItemObject.pic
     let name = ItemObject.name
@@ -122,12 +128,12 @@ function itemSaveToCompras(objId, quantity) {           //nose por que, pero se 
 
         } else {
 
-            alert("Item ya selecionado!")
+            alert("Item ya selecionado!")   //eliminar
 
         }
     }  
 
-    console.log(instanciasItemCompras)
+    console.log(instanciasItemCompras)      //eliminar
 }
 
 //secuencia de funciones para la construcción del catálogo de forma automática (ponele)
@@ -240,7 +246,7 @@ function cargaMemoria() {
 
     let stringTemp = JSON.stringify(instanciasItemCompras)
 
-    Storage.setItem("compras", stringTemp)
+    sessionStorage.setItem("compras", stringTemp)
 
 }
 
@@ -253,8 +259,8 @@ $(document).ready(function() {
     $("#01001_buy").on("click", ( function() { 
         itemSaveToCompras("01001", 1) 
         cargaMemoria()
-        location.href= "/carrito.html"
         alert("veamos que pasa")
+        location.href= "/carrito.html"
     }))  
 
     $("#01002_buy").on("click", ( function() { itemSaveToCompras("01002", 1) }))
@@ -285,7 +291,5 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     HTMLCatalogoIdenti()
-    
-    console.log()
 
 })
