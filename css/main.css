@@ -369,6 +369,13 @@ header {
           -ms-transform: scale(1.2);
           transform: scale(1.05);
           box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); }
+    #catalogo #checkout__bottom {
+      display: flex;
+      direction: column;
+      justify-content: space-around;
+      margin-bottom: 3vh; }
+      #catalogo #checkout__bottom input {
+        font-size: 160%; }
   .modal-body__inline {
     display: block;
     margin-bottom: 3vh; }
@@ -419,6 +426,14 @@ header {
           -ms-transform: scale(1.2);
           transform: scale(1.05);
           box-shadow: 0 0 11px rgba(33, 33, 33, 0.2); }
+    #catalogo #checkout__bottom {
+      display: flex;
+      direction: column;
+      justify-content: space-around;
+      margin-bottom: 6vh;
+      margin-top: 6vh; }
+      #catalogo #checkout__bottom input {
+        font-size: 160%; }
   .modal-body__inline {
     display: block;
     margin-bottom: 3vh; }

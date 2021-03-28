@@ -631,6 +631,17 @@ header {
                 }
             }
         }
+
+        #checkout__bottom {
+            display: flex;
+            direction: column;
+            justify-content: space-around;
+            margin-bottom: 3vh;
+            
+            input{
+                @include rfs (160%, font-size);
+            }
+        }
     }
 
     .modal-body__inline {
@@ -708,6 +719,18 @@ header {
                     transform: scale(1.05);
                     box-shadow: 0 0 11px rgba(33,33,33,.2); 
                 }
+            }
+        }
+
+        #checkout__bottom {
+            display: flex;
+            direction: column;
+            justify-content: space-around;
+            margin-bottom: 6vh;
+            margin-top: 6vh;
+            
+            input{
+                @include rfs (160%, font-size);
             }
         }
     }

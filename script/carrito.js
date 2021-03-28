@@ -9,14 +9,20 @@ $(document).ready( function() {
 
     comprasString = JSON.parse(comprasString)
 
-    console.log(comprasString)
-
     comprasString.forEach(HTMLCarritoBuilder)
 
     deleteBtn()
 
     $("td:last-child input").on("click", function(){ 
-        deleteCompra(event, comprasString)
+        comprasString = deleteCompra(event, comprasString)
+
+        console.log(comprasString)
+
+        comprasString = JSON.stringify(comprasString)
+
+        console.log(comprasString)
+
+        sessionStorage.setItem("compras", comprasString)
     })
 
 })
