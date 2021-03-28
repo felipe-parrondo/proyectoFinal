@@ -758,12 +758,16 @@ header {
                     }
         
                     thead {
-                        background-color: green;
+                        background-color: #626f6f;
     
                         tr {
             
                             .carrito__table--head {
                                 text-align: center;
+                                padding-top: 2vh;
+                                padding-bottom: 2vh;
+                                @include rfs (120%, font-size);
+                                color: white;
                             }
             
                             #carrito__table--product {
@@ -781,6 +785,14 @@ header {
                                 margin-left: 1vw;
                                 text-align: center;
                                 border-bottom: 1px solid #BDBFBF;
+                                padding-top: 1.5vh;
+                                padding-bottom: 1.5vh;
+
+                                .carrito__table--bodyRowPic {
+                                    max-width: 5vh;
+                                    max-height: 5vh;
+                                    border: 1px solid black;
+                                }
                             }
                         }
                     }

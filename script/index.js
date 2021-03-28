@@ -1,12 +1,61 @@
-
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
+
+function deleteCompra(e, comprasArray) {
+
+    console.log(e.target)
+
+    let target = e.target
+
+    let targetParent = $(target).parent()
+
+    let targetParentParent = (targetParent).parent()
+
+    targetParentParent.detach()
+
+    targetSiblings = targetParent.siblings()
+
+    targetImg = targetSiblings.children()
+
+    console.log(targetImg[0].src)
+
+    console.log(comprasArray[0].pic)
+
+    //console.log(targetParent.siblings())
+
+    //console.log(targetSiblings[0])
+
+    for(let i = 0; i < comprasArray.length; i++) {
+
+
+
+    }
+
+}
+
+function CargaSesion() {
+
+    let tempInfo = sessionStorage.getItem("compras")
+
+    tempInfo = JSON.parse(tempInfo)
+
+    instanciasItemCompras = tempInfo
+
+}
+
+function deleteBtn() {
+
+    let deleteBtn = $("td:last-child")
+
+    deleteBtn.append('<input type="button" value="X" class="btn btn-danger"> </input>')
+
+}
 
 
 function HTMLCarritoBuilder(currentValue, index) {
 
     let objTemp = currentValue
     
-    let tdPic = "<img src=" + objTemp.pic + ">"
+    let tdPic = "<img class='carrito__table--bodyRowPic' src=" + objTemp.pic + ">"
 
     let tdName = (objTemp.name).toString()
 
@@ -30,7 +79,7 @@ function HTMLCarritoBuilder(currentValue, index) {
 
     underParent = underParent[underParent.length - 1]
 
-    console.log(underParent)
+    //console.log(underParent)
 
     for(let o = 0; o < 7; o++) {
 
@@ -49,7 +98,10 @@ function HTMLCarritoBuilder(currentValue, index) {
     }
 }
 
+
 //secuencia de funciones para tomar la info del usuario de la sección catalogo y almacenarla en el storage
+
+
 function cargaArray (id) {
 
     let arrayID = []
@@ -75,6 +127,7 @@ function cargaArray (id) {
 
     return falseFactor
 }
+
 
 function itemSaveToCompras(objId, quantity) {           //nose por que, pero se ejecuta dos veces la funcion //solucionado
 
@@ -112,9 +165,7 @@ function itemSaveToCompras(objId, quantity) {           //nose por que, pero se 
     let shipp = newShipp
     let total = newTotal
 
-    let trueFactor = cargaArray(id)
-
-    console.log(trueFactor)
+    let trueFactor
 
     if(instanciasItemCompras.length == 0) {
 
@@ -122,21 +173,20 @@ function itemSaveToCompras(objId, quantity) {           //nose por que, pero se 
 
     } else {
 
+        trueFactor = cargaArray(id)
+
         if(trueFactor == 1) {
 
             instanciasItemCompras.push(new ItemCompras(pic, name, shipp, price, quantity, total, id))
 
-        } else {
-
-            alert("Item ya selecionado!")   //eliminar
-
         }
-    }  
-
-    console.log(instanciasItemCompras)      //eliminar
+    }
 }
 
-//secuencia de funciones para la construcción del catálogo de forma automática (ponele)
+
+// --- // --- // --- // --- // --- // --- //
+
+
 function HTMLCatalogoIdenti () {
     
     for(let i = 0; i < instanciasItemSave.length; i++){
@@ -246,6 +296,10 @@ function cargaMemoria() {
 
     let stringTemp = JSON.stringify(instanciasItemCompras)
 
+    console.log(stringTemp)
+
+    console.log(instanciasItemCompras)
+
     sessionStorage.setItem("compras", stringTemp)
 
 }
@@ -257,10 +311,9 @@ function cargaMemoria() {
 $(document).ready(function() {
 
     $("#01001_buy").on("click", ( function() { 
-        itemSaveToCompras("01001", 1) 
+        itemSaveToCompras("01001", 1)
         cargaMemoria()
-        alert("veamos que pasa")
-        location.href= "/carrito.html"
+        //location.href= "/carrito.html"
     }))  
 
     $("#01002_buy").on("click", ( function() { itemSaveToCompras("01002", 1) }))
@@ -291,5 +344,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     HTMLCatalogoIdenti()
+
+    CargaSesion()
 
 })

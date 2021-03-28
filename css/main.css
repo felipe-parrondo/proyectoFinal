@@ -444,16 +444,26 @@ header {
           margin-left: 2vw;
           margin-right: 2vw; }
         #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table thead {
-          background-color: green; }
+          background-color: #626f6f; }
           #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table thead tr .carrito__table--head {
-            text-align: center; }
+            text-align: center;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            font-size: 120%;
+            color: white; }
           #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table thead tr #carrito__table--product {
             column-span: 2;
             text-align: center; }
         #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table #carrito__table--body tr .carrito__table--bodyRow {
           margin-left: 1vw;
           text-align: center;
-          border-bottom: 1px solid #BDBFBF; }
+          border-bottom: 1px solid #BDBFBF;
+          padding-top: 1.5vh;
+          padding-bottom: 1.5vh; }
+          #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table #carrito__table--body tr .carrito__table--bodyRow .carrito__table--bodyRowPic {
+            max-width: 5vh;
+            max-height: 5vh;
+            border: 1px solid black; }
     #carrito__bg #carrito__outerFlex #carrito__checkout {
       margin-left: 3vw;
       margin-right: 3vw; }

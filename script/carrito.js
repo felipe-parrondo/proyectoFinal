@@ -13,4 +13,10 @@ $(document).ready( function() {
 
     comprasString.forEach(HTMLCarritoBuilder)
 
+    deleteBtn()
+
+    $("td:last-child input").on("click", function(){ 
+        deleteCompra(event, comprasString)
+    })
+
 })
