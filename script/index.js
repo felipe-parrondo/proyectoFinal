@@ -1,32 +1,48 @@
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
-function quantityModificador(e) {
+function objUpdater() {
 
     let arrayTemp = sessionStorage.getItem("compras")
 
     arrayTemp = JSON.parse(arrayTemp)
 
-    let target = e.target
+    for(let i = 0; i < arrayTemp.length; i++) {
 
-    target.value // nuevo valor ingresado
+        let quantTemp = arrayTemp[i].quantity
+        let priceTemp = arrayTemp[i].price
+        let shippTemp = arrayTemp[i].shipp
 
-    let targetParent = target.parent()
+        arrayTemp.total = (quantTemp * priceTemp) + shippTemp
 
-    let targetSiblings = targetParent.siblings()
-
-    for(let i = 0; i < targetSiblings.length; i++) {
-
-        let currentSib = targetImg[i]
-
-        let currentImg = (arrayTemp[i].pic).toString()
-
-        if(currentImg == currentSib.src) {
-            //condicion para insertar la cantidad en el array
-        }
     }
+
+    arrayTemp = JSON.stringify(arrayTemp)
+
+    sessionStorage.setItem("compras", arrayTemp)
+
+    location.reload()
+
 }
 
-function deleteCompra(e) {            //function para eliminar del array el objecto eliminado visualmente (asi no vuelve a figurar si la persona sale y entra del carrito)
+function quantityModificador(e) {
+    
+    let quants = $(".modal-body__quant")
+
+    let arrayTemp = sessionStorage.getItem("compras")
+
+    arrayTemp = JSON.parse(arrayTemp)
+
+    for(let i = 0; i < quants.length; i++) {
+        arrayTemp[i].quantity = $(quants[i]).val()
+    }
+
+    arrayTemp = JSON.stringify(arrayTemp)
+
+    sessionStorage.setItem("compras", arrayTemp)
+
+}
+
+function deleteCompra(e) {
 
     let arrayTemp = sessionStorage.getItem("compras")
 
@@ -36,15 +52,11 @@ function deleteCompra(e) {            //function para eliminar del array el obje
 
     let targetParent = $(target).parent()
 
-    let targetParentParent = (targetParent).parent()
+    let targetParentParent = $(targetParent).parent()
 
-    targetSiblings = targetParent.siblings()
+    targetSiblings = $(targetParent).siblings()
 
-    //console.log(targetSiblings)
-
-    targetImg = targetSiblings.children()
-
-    //console.log(targetImg)
+    targetImg = $(targetSiblings).children()
 
     if(arrayTemp.length == 1) {
 
@@ -59,15 +71,12 @@ function deleteCompra(e) {            //function para eliminar del array el obje
             let currentImg = (arrayTemp[i].pic).toString()
     
             if(currentImg == currentSib.src) {
-                arrayTemp.splice(i, 2)         //no termina de retirar el elemento del array -- a
+                arrayTemp.splice(i, 2)
             }
         }
     }
-
     
     targetParentParent.remove()
-
-    //console.log(arrayTemp)
 
     arrayTemp = JSON.stringify(arrayTemp)
 
@@ -120,8 +129,6 @@ function HTMLCarritoBuilder(currentValue, index) {
 
     underParent = underParent[underParent.length - 1]
 
-    //console.log(underParent)
-
     for(let o = 0; o < 7; o++) {
 
         $("<td> </td>").appendTo(underParent)
@@ -148,7 +155,7 @@ function deleteBtn () {
 }
 
 
-//secuencia de funciones para tomar la info del usuario de la sección catalogo y almacenarla en el storage
+// --- // --- // --- // --- // --- // --- //
 
 
 function cargaArray (id) {
@@ -178,12 +185,12 @@ function cargaArray (id) {
 }
 
 
-function itemSaveToCompras(objId, quantity) {           //nose por que, pero se ejecuta dos veces la funcion //solucionado
+function itemSaveToCompras(objId, quantity) {      
 
     let ItemObject
     let objTemp
 
-    //recorrer instancias
+ 
     for(let i = 0; i < instanciasItemSave.length; i++) {
 
         objTemp = instanciasItemSave[i]
@@ -196,7 +203,7 @@ function itemSaveToCompras(objId, quantity) {           //nose por que, pero se 
 
     let newPrice = ItemObject.price
 
-    newPrice = newPrice.slice(1)        //se elimina el signo "$" para poder operar con el valor numerico
+    newPrice = newPrice.slice(1)       
 
     let newShipp = parseInt(ItemObject.measure) * 3
 

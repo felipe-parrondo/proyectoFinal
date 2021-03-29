@@ -11,7 +11,7 @@ function ItemSave (pic, name, price, material, measure, id, marca, stock) {
     this.price = price
     this.material = material
     this.measure = measure
-    this.id = id  //id de 5 numeros --- los primeros 2 indicando la categoria y los ultimos 3 indicando el item especifico dentro de esa categoria
+    this.id = id  
     this.marca = marca  
     this.stock = stock
 }
@@ -21,7 +21,7 @@ function ItemSave (pic, name, price, material, measure, id, marca, stock) {
 function ItemCompras (pic, name, shipp, price, quantity, total, id) {
     this.pic = pic
     this.name = name
-    this.shipp = shipp          // usado para calcular el costo de envío, se va a usar un valor númerico para calcular la distancia del cliente al almacen + tamaño del producto
+    this.shipp = shipp          
     this.price = price
     this.quantity = quantity
     this.total = total
