@@ -760,12 +760,10 @@ header {
         background-color: $fondoBody;
         margin-left: 3vw;
         margin-right: 3vw;
+        padding-bottom: 5vh;
+        padding-top: 5vh;
         
         #carrito__innerFlex {
-            
-            #carrito__head {
-            
-            }
         
             #carrito__table--outerDiv {
                 margin: 0;
@@ -826,6 +824,14 @@ header {
         #carrito__checkout {
             margin-left: 3vw;
             margin-right: 3vw;
+            display: flex;
+            direction: column;
+            justify-content: space-around;
+            margin-top: 6vh;
+            
+            input{
+                @include rfs (160%, font-size);
+            }
         }
     }
 }

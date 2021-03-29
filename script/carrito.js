@@ -13,16 +13,8 @@ $(document).ready( function() {
 
     deleteBtn()
 
-    $("td:last-child input").on("click", function(){ 
-        comprasString = deleteCompra(event, comprasString)
+    $("td:last-child input").on("click", function(){ deleteCompra(event) })
 
-        console.log(comprasString)
-
-        comprasString = JSON.stringify(comprasString)
-
-        console.log(comprasString)
-
-        sessionStorage.setItem("compras", comprasString)
-    })
+    $(".modal-body__quant").on("change", function() { quantityModificador(event) })
 
 })

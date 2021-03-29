@@ -448,7 +448,9 @@ header {
   #carrito__bg #carrito__outerFlex {
     background-color: #EAEDED;
     margin-left: 3vw;
-    margin-right: 3vw; }
+    margin-right: 3vw;
+    padding-bottom: 5vh;
+    padding-top: 5vh; }
     #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv {
       margin: 0; }
       #carrito__bg #carrito__outerFlex #carrito__innerFlex #carrito__table--outerDiv table {
@@ -481,4 +483,10 @@ header {
             border: 1px solid black; }
     #carrito__bg #carrito__outerFlex #carrito__checkout {
       margin-left: 3vw;
-      margin-right: 3vw; }
+      margin-right: 3vw;
+      display: flex;
+      direction: column;
+      justify-content: space-around;
+      margin-top: 6vh; }
+      #carrito__bg #carrito__outerFlex #carrito__checkout input {
+        font-size: 160%; }

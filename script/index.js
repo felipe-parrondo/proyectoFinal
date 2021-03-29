@@ -1,6 +1,36 @@
 // FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES --- FUNCIONES
 
-function deleteCompra(e, comprasArray) {            //function para eliminar del array el objecto eliminado visualmente (asi no vuelve a figurar si la persona sale y entra del carrito)
+function quantityModificador(e) {
+
+    let arrayTemp = sessionStorage.getItem("compras")
+
+    arrayTemp = JSON.parse(arrayTemp)
+
+    let target = e.target
+
+    target.value // nuevo valor ingresado
+
+    let targetParent = target.parent()
+
+    let targetSiblings = targetParent.siblings()
+
+    for(let i = 0; i < targetSiblings.length; i++) {
+
+        let currentSib = targetImg[i]
+
+        let currentImg = (arrayTemp[i].pic).toString()
+
+        if(currentImg == currentSib.src) {
+            //condicion para insertar la cantidad en el array
+        }
+    }
+}
+
+function deleteCompra(e) {            //function para eliminar del array el objecto eliminado visualmente (asi no vuelve a figurar si la persona sale y entra del carrito)
+
+    let arrayTemp = sessionStorage.getItem("compras")
+
+    arrayTemp = JSON.parse(arrayTemp)
 
     let target = e.target
 
@@ -10,22 +40,40 @@ function deleteCompra(e, comprasArray) {            //function para eliminar del
 
     targetSiblings = targetParent.siblings()
 
-    console.log(targetSiblings)
+    //console.log(targetSiblings)
 
     targetImg = targetSiblings.children()
 
-    console.log(targetImg)
+    //console.log(targetImg)
 
-    for(let i = 0; i < comprasArray.length; i++) {
+    if(arrayTemp.length == 1) {
 
-        if(comprasArray[i].pic == targetImg.src) {
-            comprasArray = comprasArray.splice(i, 1)         //no termina de retirar el elemento del array -- a
+        arrayTemp.pop()
+
+    } else {
+
+        for(let i = 0; i < arrayTemp.length; i++) {
+
+            let currentSib = targetImg[1]
+
+            let currentImg = (arrayTemp[i].pic).toString()
+    
+            if(currentImg == currentSib.src) {
+                arrayTemp.splice(i, 2)         //no termina de retirar el elemento del array -- a
+            }
         }
     }
-    
-    //targetParentParent.remove()
 
-    return comprasArray
+    
+    targetParentParent.remove()
+
+    //console.log(arrayTemp)
+
+    arrayTemp = JSON.stringify(arrayTemp)
+
+    sessionStorage.setItem("compras", arrayTemp)
+
+    location.reload()
 
 }
 
@@ -56,7 +104,7 @@ function HTMLCarritoBuilder(currentValue, index) {
 
     let tdPrice = (objTemp.price).toString()
 
-    let tdQuantity = (objTemp.quantity).toString()
+    let tdQuantity = "<input type='textarea' value='"+ (objTemp.quantity).toString() +"' class='modal-body__quant'>"
 
     let tdTotal = "$" + (objTemp.total).toString()
 
@@ -303,77 +351,97 @@ function cargaMemoria() {
 
 $(document).ready(function() {
 
+    
+
     $("#01001_buy").on("click", ( function() { 
         itemSaveToCompras("01001", 1)
         cargaMemoria()
+        $("#01001_buy").notify("Agregado!", "success")
     }))  
     $("#01002_buy").on("click", ( function() { 
         itemSaveToCompras("01002", 1)
         cargaMemoria()
+        $("#01002_buy").notify("Agregado!", "success")
     }))  
     $("#01003_buy").on("click", ( function() { 
         itemSaveToCompras("01003", 1)
         cargaMemoria()
+        $("#01003_buy").notify("Agregado!", "success")
     }))  
     $("#01004_buy").on("click", ( function() { 
         itemSaveToCompras("01004", 1)
         cargaMemoria()
+        $("#01004_buy").notify("Agregado!", "success")
     }))  
     $("#01005_buy").on("click", ( function() { 
         itemSaveToCompras("01005", 1)
         cargaMemoria()
+        $("#01005_buy").notify("Agregado!", "success")
     }))  
     $("#01006_buy").on("click", ( function() { 
         itemSaveToCompras("01006", 1)
         cargaMemoria()
+        $("#01006_buy").notify("Agregado!", "success")
     }))  
     $("#01007_buy").on("click", ( function() { 
         itemSaveToCompras("01007", 1)
         cargaMemoria()
+        $("#01007_buy").notify("Agregado!", "success")
     }))  
     $("#01008_buy").on("click", ( function() { 
         itemSaveToCompras("01008", 1)
         cargaMemoria()
+        $("#01008_buy").notify("Agregado!", "success")
     }))  
     $("#02001_buy").on("click", ( function() { 
         itemSaveToCompras("02001", 1)
         cargaMemoria()
+        $("#02001_buy").notify("Agregado!", "success")
     }))  
     $("#02002_buy").on("click", ( function() { 
         itemSaveToCompras("02002", 1)
         cargaMemoria()
+        $("#02002_buy").notify("Agregado!", "success")
     }))  
     $("#03001_buy").on("click", ( function() { 
         itemSaveToCompras("03001", 1)
         cargaMemoria()
+        $("#03001_buy").notify("Agregado!", "success")
     }))  
     $("#04001_buy").on("click", ( function() { 
         itemSaveToCompras("04001", 1)
         cargaMemoria()
+        $("#04001_buy").notify("Agregado!", "success")
     })) 
     $("#05001_buy").on("click", ( function() { 
         itemSaveToCompras("05001", 1)
         cargaMemoria()
+        $("#05001_buy").notify("Agregado!", "success")
     })) 
     $("#05002_buy").on("click", ( function() { 
         itemSaveToCompras("05002", 1)
         cargaMemoria()
+        $("#05002_buy").notify("Agregado!", "success")
     }))    
     $("#05003_buy").on("click", ( function() { 
         itemSaveToCompras("05003", 1)
         cargaMemoria()
+        $("#05003_buy").notify("Agregado!", "success")
     }))  
     $("#06001_buy").on("click", ( function() { 
         itemSaveToCompras("06001", 1)
         cargaMemoria()
+        $("#06001_buy").notify("Agregado!", "success")
     }))  
     $("#07001_buy").on("click", ( function() { 
         itemSaveToCompras("07001", 1)
         cargaMemoria()
+        $("#07001_buy").notify("Agregado!", "success")
     }))  
     $("#07002_buy").on("click", ( function() { 
         itemSaveToCompras("07002", 1)
         cargaMemoria()
+        $("#07002_buy").notify("Agregado!", "success")
     })) 
 })
 

@@ -63,9 +63,9 @@ instanciasItemSave.push(new ItemSave("http://127.0.0.1:5500/multimedia/products/
 
 instanciasItemSave.push(new ItemSave("http://127.0.0.1:5500/multimedia/products/enhebrador.jpg", "Enhebradores", "$64.99", "Madera y Plástico", '5"', "05002", "Genérica", "Disponible"))  //Enhebrador
 
-instanciasItemSave.push(new ItemSave("http://127.0.0.1:5500/multimedia/products/botones.jpg", "Pack de Cierres", "$37.50", "Tela y Acero", "5 metros", "05003", "Genérica", "Disponible"))  //Cierre
+instanciasItemSave.push(new ItemSave("http://127.0.0.1:5500/multimedia/products/cierre.jpg", "Pack de Cierres", "$37.50", "Tela y Acero", "5 metros", "05003", "Genérica", "Disponible"))  //Cierre
 
-instanciasItemSave.push(new ItemSave("http://127.0.0.1:5500/multimedia/products/cierre.jpg", "Caja de Botones", "$34.99", "Madera y Plástico", '1" - 6"', "06001", "Genérica", "Disponible"))  //Boton
+instanciasItemSave.push(new ItemSave("http://127.0.0.1:5500/multimedia/products/botones.jpg", "Caja de Botones", "$34.99", "Madera y Plástico", '1" - 6"', "06001", "Genérica", "Disponible"))  //Boton
 
 instanciasItemSave.push(new ItemSave("http://127.0.0.1:5500/multimedia/products/cinta_metrica.jpg", "Cinta Métrica", "$80.50", "Plástico", "10 metros", "07001", "Genérica", "Disponible"))  //CMetrica
 
